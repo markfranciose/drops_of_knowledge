@@ -20,3 +20,14 @@ created_user = User.new(params["user"])
     session[:user_id] = created_user.id
     redirect '/'
 ```
+
+Making a "PUT" request in an erb form: 
+```html
+<form action="/someaction" method="POST">
+  <input type="hidden" name="_method" value="put">
+```
+and similarly, a "DELETE" request:
+```html
+<form action="/someaction" method="POST">
+  <input type="hidden" name="_method" value="delete">
+```
