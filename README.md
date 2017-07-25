@@ -7,6 +7,33 @@ a cheat_sheet of cheat_sheets
 
 # SNIPPETS!
 
+## jQuery
+
+wrapping a function in .ready:
+```js
+$(document).ready( function() {
+  // some code
+});
+```
+
+DOM traversing: 
+```js
+// .find()
+$("#vacations").find(.america) // search through the descendants of a DOM element.
+// .find()
+$("#vacations li").first() // construct a new jQ object from the first element in a set.
+// .last()
+$("#vacations li").last() // as above, new jQ object of the last element of set
+// .prev()
+$("#vacations li").last().prev() // as above, but the previous (one up) element of the selection. Chained in this case.
+// .next()
+$("#vacations li").last().prev().next() //as above, but returning the next (one down) element. Which was our original element.
+// .parent()
+$("#vacations").parent() // selects the parent of the object. e.g. the tag under which that tag is nested
+// .children()
+$("#vacations").children() //selects all of the children of your element. Selects all children of those children as well
+```
+
 ## Sinatra Snips:
 Correct syntax to delete information from a session:
 ```ruby
