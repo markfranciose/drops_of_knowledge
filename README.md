@@ -58,3 +58,15 @@ and similarly, a "DELETE" request:
 <form action="/someaction" method="POST">
   <input type="hidden" name="_method" value="delete">
 ```
+
+Helper methods: 
+```ruby
+  def current_user
+    User.find(session[:user_id]) if session[:user_id]
+  end
+
+  def logged_in?
+    return true if current_user
+    false
+  end
+```
