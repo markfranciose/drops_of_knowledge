@@ -85,7 +85,7 @@ and similarly, a "DELETE" request:
 ### Password custom validation
 ```ruby
   # add this validation to your User model:
-  validate :check_password
+  validate :has_password
   
   # add this to your password setter:
   @raw_password = new_password
