@@ -1,6 +1,11 @@
 # cheat_sheet_of_cheat_sheets
 a cheat_sheet of cheat_sheets
 
+## Active Record Resources
+- [migrations](http://guides.rubyonrails.org/active_record_migrations.html)
+- [validations](http://guides.rubyonrails.org/active_record_validations.html)
+- [associations](http://guides.rubyonrails.org/association_basics.html)
+
 ## ReST ReSOURCES
 
 - [RESTular](http://www.restular.com/)
