@@ -58,3 +58,19 @@ and similarly, a "DELETE" request:
 <form action="/someaction" method="POST">
   <input type="hidden" name="_method" value="delete">
 ```
+
+## BCrypt 
+
+### User model:
+```ruby
+
+  def password
+    @password ||= BCrypt::Password.new(hashword)
+  end
+
+  def password=(new_password)
+    @password = BCrypt::Password.create(new_password)
+    self.hashword = @password
+  end
+
+```
