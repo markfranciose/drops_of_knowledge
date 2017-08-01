@@ -1,6 +1,12 @@
 # cheat_sheet_of_cheat_sheets
 a cheat_sheet of cheat_sheets
 
+## My Code Examples
+
+### OOJS
+- [bikes and stations:](https://github.com/chi-fiery-skippers-2017/oojs-bikes-and-stations-challenge/tree/solo-markfranciose) OOJS using constructor functions
+- [gardens:](https://github.com/chi-fiery-skippers-2017/oojs-garden-challenge/blob/pair-markfranciose%2Crrpatel25/src/garden.js) OOJS using object literal notation
+
 ## Active Record Resources
 - [migrations](http://guides.rubyonrails.org/active_record_migrations.html)
 - [validations](http://guides.rubyonrails.org/active_record_validations.html)
