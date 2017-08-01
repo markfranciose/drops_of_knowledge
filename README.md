@@ -59,6 +59,21 @@ and similarly, a "DELETE" request:
   <input type="hidden" name="_method" value="delete">
 ```
 
+#### helper methods
+```ruby
+helpers do
+  def current_user
+    User.find(session[:user_id]) if session[:user_id]
+  end
+
+  def logged_in?
+    return true if current_user
+    false
+  end
+end
+```
+
+
 ## BCrypt 
 
 ### User model:
