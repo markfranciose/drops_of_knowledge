@@ -12,6 +12,12 @@ a cheat_sheet of cheat_sheets
 - [validations](http://guides.rubyonrails.org/active_record_validations.html)
 - [associations](http://guides.rubyonrails.org/association_basics.html)
 
+## JS Resources
+- [JS basics challenge](https://github.com/chi-fiery-skippers-2017/javascript-from-ruby-challenge)
+- [MDN JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [MDN JS Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [jshint](http://jshint.com/) helpful for debugging JS code.
+
 ## ReST ReSOURCES
 
 - [RESTular](http://www.restular.com/)
