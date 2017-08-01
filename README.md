@@ -123,6 +123,13 @@ helpers do
     return true if current_user
     false
   end
+  
+  # Or:
+  
+  def logged_in?
+    session[:user_id] != nil
+  end
+  
 end
 ```
 
