@@ -7,6 +7,41 @@ a cheat_sheet of cheat_sheets
 
 # SNIPPETS!
 
+## Active Record
+
+### Migrations
+
+#### create_table:
+```ruby
+create_table :suppliers do |t| 
+  t.string :name
+  t.integer :supplier_code
+  
+  t.timestamps
+end
+```
+
+#### constraints
+```ruby
+create_table :cool_people do |t|
+  t.string :name, null: false
+  t.string :email, unique: true
+  
+  t.timestamps
+end
+```
+
+#### add_column: 
+```ruby
+add_column(:suppliers, :qualification, :string)
+```
+
+#### remove_column:
+```ruby
+remove_column(:suppliers, :qualification)
+```
+
+
 ## jQuery
 
 wrapping a function in .ready:
@@ -35,12 +70,13 @@ $("#vacations").children() //selects all of the children of your element. Select
 ```
 
 ## Sinatra Snips:
-Correct syntax to delete information from a session:
+
+#### Correct syntax to delete information from a session:
 ```ruby
 session.delete(:user_id)
 ```
 
-Adding a :user_id key to a session:
+#### Adding a :user_id key to a session:
 ```ruby
 created_user = User.new(params["user"])
   if created_user.save
@@ -48,12 +84,12 @@ created_user = User.new(params["user"])
     redirect '/'
 ```
 
-Making a "PUT" request in an erb form: 
+#### Making a "PUT" request in an erb form: 
 ```html
 <form action="/someaction" method="POST">
   <input type="hidden" name="_method" value="put">
 ```
-and similarly, a "DELETE" request:
+#### and similarly, a "DELETE" request:
 ```html
 <form action="/someaction" method="POST">
   <input type="hidden" name="_method" value="delete">
