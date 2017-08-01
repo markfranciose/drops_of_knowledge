@@ -74,3 +74,26 @@ and similarly, a "DELETE" request:
   end
 
 ```
+
+### Authenticate method:
+```ruby
+  def authenticate(input_password)
+  	self.password == input_password
+  end
+```
+
+### Password custom validation
+```ruby
+  # add this validation to your User model:
+  validate :check_password
+  
+  # add this to your password setter:
+  @raw_password = new_password
+  
+  def has_password
+    if @raw_password.nil? || @raw_password.empty?
+      errors.add(:password, "is required")
+    end
+  end
+```  
+
