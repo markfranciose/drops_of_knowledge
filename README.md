@@ -30,10 +30,10 @@ a cheat_sheet of cheat_sheets
 
 #### create_table:
 ```ruby
-create_table :suppliers do |t| 
+create_table :suppliers do |t|
   t.string :name
   t.integer :supplier_code
-  
+
   t.timestamps
 end
 ```
@@ -43,12 +43,12 @@ end
 create_table :cool_people do |t|
   t.string :name, null: false
   t.string :email, unique: true
-  
+
   t.timestamps
 end
 ```
 
-#### add_column: 
+#### add_column:
 ```ruby
 add_column(:suppliers, :qualification, :string)
 ```
@@ -68,7 +68,7 @@ $(document).ready( function() {
 });
 ```
 
-DOM traversing: 
+DOM traversing:
 ```js
 // .find()
 $("#vacations").find(.america) // search through the descendants of a DOM element.
@@ -101,7 +101,7 @@ created_user = User.new(params["user"])
     redirect '/'
 ```
 
-#### Making a "PUT" request in an erb form: 
+#### Making a "PUT" request in an erb form:
 ```html
 <form action="/someaction" method="POST">
   <input type="hidden" name="_method" value="put">
@@ -123,18 +123,24 @@ helpers do
     return true if current_user
     false
   end
-  
+
   # Or:
-  
+
   def logged_in?
     session[:user_id] != nil
   end
-  
+
 end
 ```
 
 
-## BCrypt 
+## BCrypt
+
+### Steps to including BCrypt in your app
+1. run a ```shell gem install bcrypt ```
+2. add ```ruby gem 'bcrypt' ``` to your Gemfile
+3. add ```ruby require 'bcrypt' ``` to /config/environment.rb
+4. RESTART shotgun/sinatra
 
 ### User model:
 ```ruby
@@ -161,14 +167,14 @@ end
 ```ruby
   # add this validation to your User model:
   validate :has_password
-  
+
   # add this to your password setter:
   @raw_password = new_password
-  
+
   def has_password
     if @raw_password.nil? || @raw_password.empty?
       errors.add(:password, "is required")
     end
   end
-```  
+```
 
