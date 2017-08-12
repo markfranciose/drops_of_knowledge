@@ -111,6 +111,20 @@ created_user = User.new(params["user"])
 <form action="/someaction" method="POST">
   <input type="hidden" name="_method" value="delete">
 ```
+#### Error handling in create
+
+```ruby
+post /contacts do
+  @contact = Contact.new(params[:contact])
+  if @contact.save
+    redirect '/contacts'
+  else
+    status 422 # alerts browser that there is an input error.
+    @errors = @contact.errors.full_messages # or whatever format you use in your views to show errors
+    erb :'/contacts/new'
+  end
+end
+```
 
 #### helper methods
 ```ruby
