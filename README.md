@@ -1,5 +1,30 @@
 # cheat_sheet_of_cheat_sheets
-a cheat_sheet of cheat_sheets
+
+## What is the Point?
+The point of this repo is two-fold:
+1. To put the resources that I use in one easy to find place.
+2. To stay sharp on technologies that I've used
+
+## Big List of Resources
+
+## Big List of Topics
+
+
+### General
+
+#### Regex
+
+### Git
+- [Great general Git reference](https://github.com/ArslanBilal/Git-Cheat-Sheet)
+
+### Ruby
+
+#### Style
+- [AirBnB Style Guide:](https://github.com/airbnb/ruby) Style guide of record, AFAIK
+-
+
+#### Rspec
+
 
 ## My Code Examples
 
