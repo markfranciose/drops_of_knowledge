@@ -1,0 +1,42 @@
+__ What is the difference between ctrl + d and ctrl + c __
+ctrl + c tells the terminal to send a SIGINT to the current foreground process, which by default terminates the application.
+ctrl + d tells the terminal to register an EOF(end of file) on standard input, which the shell interprets as a desire to exit
+
+__What does the reset command do?__
+Re-initializes the terminal, as if you were starting it from scratch
+
+```mkdir -p```
+Creates dirs if they haven't been created yet. Useful to have this as a default flag
+
+__What do curly braces do in bash?__
+[see explanation here](www.linuxjournal.com/content/bash-brace-expansion)
+Can pass multiple values in for a string, can pass multiple pathnames to a command.
+curly braces generate patterns
+```
+$ rm /a/long/path{cool, sweet}
+$ echo 'Is equivalent to'
+$ rm /a/long/path/cool /a/long/path/sweet
+```
+Using as a range:
+```shell
+mkdir -p images/img{0..100..10}
+```
+Will create a 10,20,30.. etc. image dir
+
+_WC_
+wc is short for 'word count'
+number of lines, words, chars
+-l for lines
+-c bytes
+-w for words
+-m for chars
+-L length of the longest line
+
+if you type wc, it's just going to wait for standard input. You keep typing things... then ctrl + d sends the end of file signal... and it tells you what you did. 
+
+_general_
+Generally speaking, the order of arguments doesn't matter. Some do however. 
+ex:
+head will print the first (10) lines of the file.
+
+
