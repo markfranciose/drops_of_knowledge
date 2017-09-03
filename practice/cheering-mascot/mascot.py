@@ -1,12 +1,32 @@
 def call_out_cheer():
-	cheer = input('What is the cheer? \n')
+	return input('What is the cheer? \n')
 
-def display():
-	return 1
+def display(sign):
+	print(sign)
 
-def mascot_sign_for():
-	return 1
-
+def mascot_sign_for(cheer):
+	# signer = {
+	# 	'RED HOT'					: 'H-O-T',
+	# 	'DO IT AGAIN'			: 'Go, Fight, Win',
+	# 	'2 BITS'					: 'Holler!',
+	# 	'STOMP YOUR FEET'	: 'STOMP!'
+	# }
+	# return signer.get(cheer, "GO TEAM")
+	if cheer == 'RED HOT':
+		return 'H-O-T'
+	elif cheer == 'DO IT AGAIN':
+		return 'Go, Fight, Win'
+	elif cheer == '2 BITS':
+		return 'Holler!'
+	elif cheer == 'STOMP YOUR FEET':
+		return 'STOMP!'
+	else:
+		return 'GO TEAM'
 
 def coordinate_cheers():
-	call_out_cheer()
+	cheer = call_out_cheer()
+	while cheer != 'GAME OVER':
+		display(mascot_sign_for(cheer))
+		cheer = call_out_cheer()
+	else:
+		quit()
