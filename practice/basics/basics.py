@@ -42,6 +42,8 @@ print(total)
 string = 'Mark Franciose'
 print(string[1]) # a
 
+# More common in python is single quote strings
+
 # useful string methods
 parrot = 'Norwegian Blue'
 # len(), length of a string
@@ -58,4 +60,26 @@ lion = 'roar'
 len(lion)
 lion.upper()
 
+# Methods that use dot notation only work with strings.
+# len() and str() can work with other data types
+
+# Concatenation
+concat = 'Mark ' + 'Patrick' + 'Franciose'
+
+# String interpolation
+name = 'Mark'
+print "Hello %s" % (name)
+
+string = "Mark"
+string2 = "Franciose"
+
+print "My first name is %s. My last name is %s." % (string, string2)
+
+# Other string methods:
+s = 'string'
+s.strip() # returns a string with whitespace removed from the start and end
+s.isalpha() # tests if all the string chars are of various char classes
+s.isdigit() # tests if the string chars of digits
+s.isspace() # tests if the char(s) is a space 
+# all of the isx() methods can be called on a whole string or an index of a str
 
