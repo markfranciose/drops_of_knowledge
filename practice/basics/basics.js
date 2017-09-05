@@ -13,3 +13,8 @@ function spam() {
 
 /* In JS, multiline comments
 look like this.*/
+
+var addition = 3 + 5;
+var subtraction = 5 - 3;
+var multiplication = 5 * 3;
+var division = 10 / 3;
