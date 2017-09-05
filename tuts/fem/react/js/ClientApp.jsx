@@ -4,19 +4,22 @@ import { render } from "react-dom";
 const ce = React.createElement;
 
 const MyTitle = function(props) {
-	return ce("div", null, ce("h1", { style: { color: props.color } }, props.title));
+	return (
+		<div>
+			<h1 style={{ color: props.color }}>{props.title}</h1>
+		</div>
+	);
 };
 
 const MyFirstComponent = function() {
-	return ce(
-		"div",
-		{ id: "cool" },
-		ce(MyTitle, { title: "Palmer House Hilton", color: "Peru" }),
-		ce(MyTitle, { title: "Hilton Towers", color: "burlywood" }),
-		ce(MyTitle, { title: "Drake", color: "greenyellow" }),
-		ce(MyTitle, { title: "Mariott", color: "yellowgreen" })
+	return (
+		<div id="my-first-component">
+			<MyTitle title="Palmer House Hilton" color="Peru" />
+			<MyTitle title="Hilton Towers" color="burlywood" />
+			<MyTitle title="Drake" color="greenyellow" />
+			<MyTitle title="Westin River North" color="salmon" />
+		</div>
 	);
-	0;
 };
 
 ReactDOM.render(ce(MyFirstComponent), document.getElementById("app"));
