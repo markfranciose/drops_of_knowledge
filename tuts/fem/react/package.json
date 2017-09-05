@@ -1,8 +1,15 @@
 {
 	"scripts": {
-		"lint": "eslint **/*.{js,jsx} --quiet"
+		"build": "webpack",
+		"lint": "eslint **/*.{js,jsx} --quiet",
+		"watch": "webpack --watch"
 	},
 	"dependencies": {
+		"babel": "^6.23.0",
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-preset-env": "^1.6.0",
+		"babel-preset-react": "^6.24.1",
 		"global": "^4.3.2",
 		"react": "^15.6.1",
 		"react-dom": "^15.6.1",
