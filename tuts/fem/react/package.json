@@ -3,7 +3,9 @@
 		"build": "webpack",
 		"lint": "eslint **/*.{js,jsx} --quiet",
 		"dev": "webpack-dev-server",
-		"watch": "webpack --watch"
+		"watch": "webpack --watch",
+		"test": "jest",
+		"test:update": "jest -u"
 	},
 	"dependencies": {
 		"babel": "^6.23.0",

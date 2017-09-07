@@ -111,7 +111,24 @@ Q1 - App could be stateful and pass down the search term to the components.
 # Testing React
 
 ## Snapshot Testing with Jest
+Jest is pretty much Jasmine under the hood
+Convenience features on top of Jasmine
+Version 1 of this tut has some examples running Mocha
+the __test__ dir is convention
+Jest will look through your codebase for test files
+naming = file.spec.jsx
 
-**note: version 1 of this tut has some info about testing mobile**
+
 
 ## Configuring & Running Jest
+
+When you want the snapshot to update you run jest -u
+Testing whether it matches a JSON object
+Can test API responses with this as well.
+Not for TDD. Don't mess with the snapshots.
+setup: changing .babelrc, .eslintrc.json
+$NODE_ENV=test .node_modules/.bin/jest
+Should be present in your .eslintrc.json
+```json
+"env": { "es6": true, "browser": true, "node": true, "jest": true }
+```
