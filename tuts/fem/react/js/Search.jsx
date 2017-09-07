@@ -1,12 +1,45 @@
-import React from "react";
+import React, { Component } from "react";
 import preload from "../data.json";
 import Showcard from "./ShowCard";
 
-const Search = () => (
-	<div className="search">
-		{/*<pre><code>{JSON.stringify(preload, null, 4)}</code></pre> //what this does is a quick way to dump a bunch of data to the DOM... see what it looks like*/}
-		{preload.shows.map(show => <Showcard show={show} />)}
-	</div>
-);
+class Search extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			searchTerm: ""
+		};
+
+		this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
+	}
+	handleSearchTermChange(event) {
+		this.setState({ searchTerm: event.target.value });
+	}
+	render() {
+		return (
+			<div className="search">
+				<header>
+					<h1>Video App</h1>
+					<input
+						onChange={this.handleSearchTermChange}
+						value={this.state.searchTerm}
+						type="text"
+						placeholder="Search"
+					/>
+				</header>
+				<div>
+					{preload.shows
+						.filter(
+							show =>
+								`${show.title} ${show.description}`
+									.toUpperCase()
+									.indexOf(this.state.searchTerm.toUpperCase()) >= 0
+						)
+						.map(show => <Showcard key={show.imdbID} show={show} />)}
+				</div>
+			</div>
+		);
+	}
+}
 
 export default Search;

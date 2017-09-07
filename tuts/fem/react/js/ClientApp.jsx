@@ -1,25 +1,17 @@
 import React from "react";
 import { render } from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+import Landing from "./Landing";
+import Search from "./Search";
 
-const ce = React.createElement;
-
-const MyTitle = function(props) {
-	return (
-		<div>
-			<h1 style={{ color: props.color }}>{props.title}</h1>
+const App = () => (
+	// this utilizes the implicit return of arrow functions
+	<BrowserRouter>
+		<div className="app">
+			<Route exact path="/" component={Landing} />
+			<Route path="/search" component={Search} />
 		</div>
-	);
-};
+	</BrowserRouter>
+);
 
-const MyFirstComponent = function() {
-	return (
-		<div id="my-first-component">
-			<MyTitle title="Palmer House Hilton" color="Peru" />
-			<MyTitle title="Hilton Towers" color="burlywood" />
-			<MyTitle title="Drake" color="greenyellow" />
-			<MyTitle title="Westin River North" color="salmon" />
-		</div>
-	);
-};
-
-ReactDOM.render(ce(MyFirstComponent), document.getElementById("app"));
+render(<App />, document.getElementById("app"));
