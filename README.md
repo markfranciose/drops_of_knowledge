@@ -16,7 +16,12 @@ The point of this repo is two-fold:
 
 ### Git
 - [Great general Git reference](https://github.com/ArslanBilal/Git-Cheat-Sheet)
+_stage a bunch of deleted files for commit_
+```shell
+$ git add -u :/
 
+```
+note: this will stage all of the modified files as well as the deletes
 ### Ruby
 
 #### Style
