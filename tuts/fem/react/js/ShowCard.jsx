@@ -27,6 +27,7 @@ const ShowCard = props => (
 			<h3>{props.show.title}</h3>
 			<h4>({props.show.year})</h4>
 			<p>{props.show.description}</p>
+			<p>This is still for for testing</p>
 		</div>
 	</Wrapper>
 );
