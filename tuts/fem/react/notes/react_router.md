@@ -132,3 +132,46 @@ Should be present in your .eslintrc.json
 ```json
 "env": { "es6": true, "browser": true, "node": true, "jest": true }
 ```
+
+## Shallow Testing with Enzyme
+
+If you make a change in another component (example - in ShowCard), the test for Search Will Fail as well.
+We don't want that, only want the test to fail for change in Search
+enzyme uses renderer under the hood. can't import it twice. have to get rid of renderer.
+```shell
+yarn add enzyme
+```
+Doesn't care about the children, only looks at the component in question.
+in package.json: add the jest, snapshot serialiezer
+shgallow is the fastest method.
+
+## Testing the correct number of showcards
+
+```babel
+test("Search renders correctly", () => {
+	const component = shallow(<Search />);
+	expect(component).toMatchSnapshot();
+});
+
+test("Search should render the correct amount of shows", () => {
+	const component = shallow(<Search />);
+	expect(preload.shows.length).toEqual(component.find(ShowCard).length);
+});
+
+// is the same as:
+
+describe('Search', () => {
+	
+	it(" renders correctly", () => {
+	const component = shallow(<Search />);
+	expect(component).toMatchSnapshot();
+	});
+
+	it(" should render the correct amount of shows", () => {
+	const component = shallow(<Search />);
+	expect(preload.shows.length).toEqual(component.find(ShowCard).length);
+	});
+
+})
+
+```

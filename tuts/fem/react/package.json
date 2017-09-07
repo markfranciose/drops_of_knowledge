@@ -7,6 +7,11 @@
 		"test": "jest",
 		"test:update": "jest -u"
 	},
+	"jest": {
+		"snapshotSerializers": [
+			"jest-serializer-enzyme"
+		]
+	},
 	"dependencies": {
 		"babel": "^6.23.0",
 		"babel-core": "^6.26.0",
@@ -14,6 +19,7 @@
 		"babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
 		"babel-preset-env": "^1.6.0",
 		"babel-preset-react": "^6.24.1",
+		"enzyme": "^2.9.1",
 		"eslint": "^4.6.1",
 		"eslint-config-airbnb": "^15.1.0",
 		"eslint-config-prettier": "^2.4.0",
@@ -25,6 +31,7 @@
 		"eslint-plugin-react": "^7.3.0",
 		"global": "^4.3.2",
 		"jest": "^21.0.1",
+		"jest-serializer-enzyme": "^1.0.0",
 		"prettier": "^1.6.1",
 		"prop-types": "^15.5.10",
 		"react": "^15.6.1",
