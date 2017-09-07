@@ -107,3 +107,11 @@ The transform-class-properties way works better with flow
 
 Q1 - App could be stateful and pass down the search term to the components.
 
+
+# Testing React
+
+## Snapshot Testing with Jest
+
+**note: version 1 of this tut has some info about testing mobile**
+
+## Configuring & Running Jest
