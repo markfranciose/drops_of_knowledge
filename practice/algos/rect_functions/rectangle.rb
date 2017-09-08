@@ -5,29 +5,29 @@ class Rectangle
     @width  = args.fetch(:width, 1)
     @height = args.fetch(:height, 1)
   end
+
+  def area
+    width * height
+  end
+
+  def perimeter
+    (height * 2) + (width * 2)
+  end
+
+  def diagonal
+    Math.sqrt((height^2) + (width^2))
+  end
+
+  def is_square?
+    return true if rectangle.height == rectangle.width
+  	  false
+  end
+
 end
 
-rectangle_one = Rectangle.new(width: 4, height: 4)
+rectangle_one = Rectangle.new(height: 4, width: 5)
 
-def area(rectangle)
-  rectangle.width * rectangle.height
-end
-
-puts area(rectangle_one)
-
-def perimeter(rectangle)
-  (rectangle.height * 2) + (rectangle.width * 2)
-end
-
-def diagonal(rectangle)
-  Math.sqrt((rectangle.height^2) + (rectangle.width^2))
-end
-
-def is_square(rectangle)
-  return true if rectangle.height == rectangle.width
-  false
-end
-
-puts perimeter(rectangle_one)
-puts diagonal(rectangle_one)
-puts is_square(rectangle_one)
+puts rectangle_one.area
+puts rectangle_one.perimeter
+puts rectangle_one.diagonal
+puts rectangle_one.is_square?
