@@ -8,13 +8,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <div>
-        {preload.restaurants.map(rest => <RestCard name={rest.name} />)}
-      </div>
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Eat Union while you're in Chicago!</h2>
         </div>
+      <div>
+        {preload.restaurants.map(rest => <RestCard name={rest.name} opentable={rest.opentable} phone={rest.phone} />)}
+      </div>
         <p className="App-intro">
         </p>
       </div>

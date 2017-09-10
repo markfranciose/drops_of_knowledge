@@ -1,3 +1,11 @@
+.rest-info {
+  list-style:none;
+}
+
+.rest-info li {
+  display: inline-block;
+}
+
 .App {
   text-align: center;
 }
