@@ -1,0 +1,19 @@
+{
+  "restaurants": [
+    {
+      "name": "Gene and Georgetti's",
+      "opentable": "https://opentable.com/r/gene-and-georgetti-chicago",
+      "phone": "(312) 527-3718"
+    },
+    {
+      "name": "Riva Crabhouse",
+      "opentable": "https://opentable.com/r/riva-crabhouse-on-navy-pier-chicago",
+      "phone": "(312 644-7482)"
+    },
+    {
+      "name": "Mercat a la Dante",
+      "opentable": "https://opentable.com/r/mercat-a-la-planxa-chicago",
+      "phone": "(312) 765-0524"
+    }
+  ]
+}
