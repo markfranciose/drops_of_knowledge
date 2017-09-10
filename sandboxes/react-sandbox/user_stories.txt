@@ -1,0 +1,15 @@
+# User Stories
+
+## Upon visiting the site a user can:
+- view a list of UHL1 restaurants
+	- by Union status: (wall-to-wall, partly Union)
+## With one click a user can:
+- nav to opentable to make a reservation at a particular restaurant
+- place a call to a particular restaurant
+- get directions to the restaurant
+- view more information about a restaurant
+## Viewing the restaurant info a user can:
+- view a picture related to the restaurant
+- view the street address of the restaurant
+- click a link to visit the restaurant's website
+- click a link to visit the yelp review for the restaurant?
