@@ -13,7 +13,7 @@ class App extends Component {
           <h2>Eat Union while you're in Chicago!</h2>
         </div>
       <div>
-        {preload.restaurants.map(rest => <RestCard name={rest.name} opentable={rest.opentable} phone={rest.phone} />)}
+        {preload.restaurants.map(rest => <RestCard rest = {rest} name={rest.name} opentable={rest.opentable} phone={rest.phone} />)}
       </div>
         <p className="App-intro">
         </p>

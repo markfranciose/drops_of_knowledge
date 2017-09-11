@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import CardHeader from './CardHeader';
+import CardBody from './CardBody';
+import CardFoot from './CardFoot';
+import More from './More';
 
 const Wrapper = styled.div`
 	width: 48%;
@@ -11,21 +15,27 @@ const Wrapper = styled.div`
 	overflow: hidden;
 `;
 
-const RestCard = props => (
-	<Wrapper>
-		<div id={`${props.name}-card`}>
-			<h2>{props.name}</h2>
-			<ul className='rest-info'>
-			  <li>
-			    <a href={props.opentable}>Reserve a table</a>
-			  </li>
-			  <li>
-			    Call | {props.phone}
-			  </li>
-			<a>Get Directions!</a>
-			</ul>
-		</div>
-	</Wrapper>
-	);
+class RestCard extends React.Component {
+  constructor(props) {
+	  super(props);
+		this.handleCardClick = this.handleCardClick.bind(this);
+		this.state = {cardClicked: false};
+	}
 
+  handleCardClick() {
+	  this.setState({cardClicked: true});
+	}
+
+  render(){
+
+	return(
+	<Wrapper className="rest-card" onClick={this.handleCardClick}>
+	  <CardHeader rest={this.props.rest} />
+    { this.state.cardClicked &&		<CardBody rest={this.props.rest} /> }
+		<CardFoot rest={this.props.rest} />
+		<More />
+	</Wrapper>
+  );
+  }
+}
 export default RestCard
