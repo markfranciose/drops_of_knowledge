@@ -2,16 +2,21 @@
   "restaurants": [
     {
       "name": "Gene and Georgetti's",
+      "cuisine": "Steak House, Italian",
       "opentable": "https://opentable.com/r/gene-and-georgetti-chicago",
-      "phone": "(312) 527-3718"
+      "phone": "(312) 527-3718",
+      "info": "Iconic Chicago Steakhouse. Listed in the top 3% of Chicago Restaurants according to Trip Advisor. Well known to be Henry Tamarin's favorite restaurant in Chicago. What more could you need?",
+     "gmaps": "https://goo.gl/maps/fstziii8WQ52" 
     },
     {
       "name": "Riva Crabhouse",
+      "cuisine": "Seafood",
       "opentable": "https://opentable.com/r/riva-crabhouse-on-navy-pier-chicago",
       "phone": "(312 644-7482)"
     },
     {
       "name": "Mercat a la Dante",
+      "cuisine": "Tapas",
       "opentable": "https://opentable.com/r/mercat-a-la-planxa-chicago",
       "phone": "(312) 765-0524"
     }
