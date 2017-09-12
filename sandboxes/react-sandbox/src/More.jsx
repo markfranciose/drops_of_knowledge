@@ -1,7 +1,8 @@
 import React from 'react';
+import arrow from './arrow.png';
 
 const More = props => (
-<p>  the arrow will go here.</p>
+  <span className="more">view more info</span>
 )
 
 export default More;

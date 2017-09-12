@@ -6,7 +6,7 @@ import CardFoot from './CardFoot';
 import More from './More';
 
 const Wrapper = styled.div`
-	width: 48%;
+	width: 88%;
 	display: inline-block;
 	border: 2px solid #333;
 	border-radiud: 4px;
@@ -31,7 +31,7 @@ class RestCard extends React.Component {
 	return(
 	<Wrapper className="rest-card" onClick={this.handleCardClick}>
 	  <CardHeader rest={this.props.rest} />
-    { this.state.cardClicked &&		<CardBody rest={this.props.rest} /> }
+    { this.state.cardClicked &&	<CardBody rest={this.props.rest} /> }
 		<CardFoot rest={this.props.rest} />
 		<More />
 	</Wrapper>

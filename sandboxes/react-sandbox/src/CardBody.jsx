@@ -1,16 +1,9 @@
 import React from 'react';
 
 const CardBody = props => (
-  <div>
-	<p>about a restaurant will go here.</p>
-	<p>about a restaurant will go here.</p>
-	<p>about a restaurant will go here.</p>
-	<p>about a restaurant will go here.</p>
-	<p>about a restaurant will go here.</p>
-	<p>about a restaurant will go here.</p>
-	<p>about a restaurant will go here.</p>
-	<p>about a restaurant will go here.</p>
-	</div>
+  <div className='rest-info'>
+    <p>{props.rest.info}</p>
+  </div>
 );
 
 export default CardBody;

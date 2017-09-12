@@ -4,13 +4,13 @@ const CardFoot = props => (
   <div className='card-footer'>
     <ul className='rest-info'>
       <li>
-        <a href={props.rest.opentable}>Reserve a table</a>
+        <a href={props.rest.opentable}>Get a table</a>
       </li>
       <li>
-        Call {props.rest.phone}
+        {props.rest.phone}
       </li>
       <li>
-        <a href='/cool'>Get Directions</a>
+        <a href={props.rest.gmaps}>Get Directions</a>
       </li>
     </ul>
   </div>
