@@ -173,8 +173,31 @@ public class BooleanOperatorPrecedence {
 public class Ternary {
 	public static void main(String[] args) {
 		int fuelLevel = 3;
-		char canDrive = (fuelLevl > 0) ? 'Y' : 'N';
+		char canDrive = (fuelLevel > 0) ? 'Y' : 'N';
 		System.out.println(canDrive);
 	}
 }
 
+// Java example of a case statement. default is what gets run if non-cased input is entered for penaltyKick. Because J is statically typed, you have to give penaltyKick a char, or it will error you out.
+public class Switch {
+	public static void main(String[] args) {
+		char penaltyKick = 'P';
+		switch (penaltyKick) {
+			case 'L': System.out.println("Messi shoots to the left and scores!");
+						break;
+			case 'R': System.out.println("Messi shoots to the right and misses the goal!");
+								break;
+			case 'C': System.out.println("Messi shoots down the center... and misses the goal!");
+								break;
+			default: System.out.println("Mess is in position...");
+		}
+	}
+}
+
+/* 
+ * Covered in the second chapter:
+ * - Boolean operators: &&, ||, !
+ * - Statements if, if/else, if/else if/else
+ * - ternry conditionals - shortened if/else that returns a value based on the value of a boolean expression.
+ * - switch - allows you to check equality of a variable or expression with a value that does not need to be a boolean.
+ * */
