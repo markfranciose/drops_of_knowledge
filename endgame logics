@@ -1,0 +1,38 @@
+#endgame logics
+
+class Cool
+	attr_reader :ender, :counter, :guess
+
+	def initialize
+		@ender = false
+		@counter = 0
+	end
+
+	def guesser(g)
+		@guess = g
+	end
+
+	def mover
+		@counter += 1
+		p @counter
+	end
+
+	def endgame
+		if @guess == "t"
+		@ender = true
+		elsif @counter == 9
+		@ender = true
+		else
+		@ender = false
+		end
+	end
+end
+
+cooler = Cool.new
+
+until cooler.ender == true
+	input = gets.chomp
+	cooler.guesser(input)
+	cooler.mover
+	cooler.endgame
+end
