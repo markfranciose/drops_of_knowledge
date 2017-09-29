@@ -7,3 +7,12 @@ The =~ operator compares a regex with a string, and returns (the index of the st
 "cool beans" =~ /bean/ 	# 5
 /\s/ =~ "cool beans" 	# 4`
 ```
+### List all of your gems and versions.
+```shell
+gem list
+```
+### List gems with updates available:
+
+```shell
+gem outdated
+```
