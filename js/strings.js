@@ -16,6 +16,7 @@ var notAnymore = allCaps.toLowerCase();
 
 console.log(notAnymore);
 
+// Creating a hashmap of words and # of occurances in a string
 
 var string = "How much wood could a wood chuck chuck if a wood chuck could";
 
@@ -27,5 +28,12 @@ for (var i = 0; i < string.length; i += 1) {
 
 	count = counts[char];
 
-	counts[char] = count ?
+//	counts[char] = count ?
 }
+
+// Count the number of ocurrances of a substring within a string.
+
+var temp = "This is a string is";
+var count = (temp.match(/is/g) || []).length;
+console.log(count); // returns 3, 'th*is is is'
+
