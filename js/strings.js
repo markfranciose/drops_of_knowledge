@@ -18,6 +18,7 @@ console.log(notAnymore);
 
 // Creating a hashmap of words and # of occurances in a string
 
+```
 var string = "How much wood could a wood chuck chuck if a wood chuck could";
 
 var counts = {};
@@ -28,8 +29,9 @@ for (var i = 0; i < string.length; i += 1) {
 
 	count = counts[char];
 
-//	counts[char] = count ?
+	counts[char] = count ? count + 1 : 1;
 }
+```
 
 // Count the number of ocurrances of a substring within a string.
 
