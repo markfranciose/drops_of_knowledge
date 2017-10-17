@@ -1,0 +1,38 @@
+public class BitCounting {
+	
+	public static int countBits(int n) {
+
+		String binary = Integer.toBinaryString(n);
+
+		int index = binary.indexOf("1");
+		int count = 0;
+
+		while (index != -1) {
+			count += 1;
+			binary = binary.substring(index + 1);
+			index = binary.indexOf("1");
+		}
+
+		return count;
+
+	}
+
+}
+
+public class BitCounting {
+
+  public static int countBits(int n){
+    
+    return Integer.bitCount(n);
+  }
+  
+}
+
+public class BitCounting {
+
+  public static int countBits(int n){
+    String s = Integer.toBinaryString(n);
+    return  s.length() - s.replace("1", "").length();
+  }
+  
+}
