@@ -1,0 +1,6 @@
+const isToday = (date) => {return new Date().toDateString() === date.toDateString();}
+// the function above works...
+const isToday = (date) => return new Date().toDateString() === date.toDateString() 
+// this function doesn't... because with the one liner, you have to use the implicit return... actually using the return keyword messes it up.
+const isToday = (date) => new Date().toDateString() === date.toDateString()
+// this works.... 
