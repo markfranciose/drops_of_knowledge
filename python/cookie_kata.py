@@ -14,3 +14,9 @@ print(cookie(2.3))
 print(cookie(True))
 
 print(isinstance(True, float))
+
+## More common use:
+
+x = 200
+
+print(type(x) == int)
