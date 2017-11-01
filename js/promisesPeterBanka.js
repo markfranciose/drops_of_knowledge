@@ -48,3 +48,27 @@ badly_namedPromiseCase
 	.catch(value => console.log('OH NOES', value))
 
 // but, like all conventions... just keep them... 
+
+// 8 mins or so... refactoring a previous series of functions that used callbacks to use promises
+/*
+
+let randNum1;
+
+ApiCall()
+	.then((response) => {
+		const parsedData1 = JsonParser(response);
+		randNum1 = getTheValue(parsedData1);
+		return ApiCall();
+	})
+	.then(response2 => {
+		const parsedData2 = JasonParser(response2);
+		const randNum2 = getTheValue(parsedData2);
+		console.log(randNum1 + randNum2);
+	})
+	.catch(err => {
+		console.log('look what the dog dragged in', err)
+	})
+*/
+
+// promise can return a promise and you can chain them up... 
+// at ~20 mins... becomes hard to follow...
