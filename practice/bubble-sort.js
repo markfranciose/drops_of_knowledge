@@ -1,4 +1,5 @@
 // bubble sort is a good building block for learning. Not something you'd actually use in production.
+//
 
 let unsortedArray = [5,7,6,4]
 
@@ -27,3 +28,22 @@ const bubbleSort = (nums) => {
 }
 
 console.log(bubbleSort(unsortedArray))
+
+const bubbleSort2 = array => {
+	do {
+		let swap = false;
+		for (let i = 0; i < array.length; i += 1) {
+			if (array[i] > array[i+1]) {
+				let temp = array[i];
+				array[i] = array[i + 1];
+				array[i + 1] = temp;
+				swap = true;
+			}
+		}
+	} while (!swap)
+	return array
+}
+
+
+let a = bubbleSort([1,6,3,2,56,6,3,3,5,6,2,3,4049]);
+console.log(a);
