@@ -29,5 +29,30 @@ root account - email addy used to sign up with AWS. unlimited access to everythi
 Security settings: 
 MFA (Multi-factor authentication.)
 follow directions to configure.
+Can be a virtual device (eg. alert on phone, Google Auth... )
+or a physical fob that you'd have to buy.
+
+
+
+## Lecture 11. Create a billing Alarm - Lab
+- Enable Billing alert emails: Billing & Cost Management Dashboard -> Preferences -> [check] Receive Billing Alerts
+- go to CloudWatch -> Alarms -> Create Alarm:
+	- create name, description, threshold amount, notification email.
+
+## Lecture 12. Summary
+- IAM consists of the following:
+	- Users
+	- Groups (A way to group users & apply policies collectively)
+	- Roles (can be AWS outside your org... other AWS resources)
+	- Policy documents - JSON
+
+- IAM is universal, no regions. 
+- The root account is the first account created when setting up AWS, has complete Admin access.
+- New Users have no permissions when first created.
+- New Users are assigned an Access Key ID & Secret Access key when created. Not a password, can use the CLI and the APIs. Only viewed once, can destroy and re-create.
+- Always set up MFA on your root account.
+- You can create and customize your own personal password rotation policies.
+
+
 
 
