@@ -82,3 +82,34 @@ Exam Tips for Versioning
 - once enabled cannot be disabled, only suspended.
 - integrates with lifecycle rules
 - MFA capacity. 
+
+## 16 Cross Region Replication - Lab
+
+enabling crr does files going forward.
+
+
+For copying existing files:
+
+aws s3 cp --recursive s3://bluckname1 s3://bucketname2
+permissions follow the file to the target..
+deletions don't follow aall the way... 
+so, versioning can be tricky with CRR.
+
+Exam Tips for CRR
+- Versioning must be enabled on both the source and destination buckets. 
+- regions must be different.
+- Files exitsting are not replicated automatically, future updates are.
+- You cannot replicate to multiple buckets or daisy chain- for the time being.
+- Dekete arkers are replicated.
+- Dekete indivudyak vesions of deleted markers not replicated.
+- Understand CRR at a high level.
+
+## 16 - Lab Lifecycle mgmt and Glacier.
+
+Exam Tips for Lifecycle MGMT
+- can be used in conjnction with version (or not)
+- can be applied to current versions and previous versions.
+- following actions:
+	- transition to standard - IA (128 kb file, 30 days after creation)
+	- to glacier, at least 30 days after transition to IA.
+	
