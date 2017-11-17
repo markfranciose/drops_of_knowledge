@@ -112,4 +112,11 @@ Exam Tips for Lifecycle MGMT
 - following actions:
 	- transition to standard - IA (128 kb file, 30 days after creation)
 	- to glacier, at least 30 days after transition to IA.
-	
+	- can permanently delete (both from s3 and glacier.)
+
+
+## 17 - CloudFront CDN Overview
+Important to understand CloudFront and what a CDN is
+A CDN is a system of distributed servers that deliver webpages and other content to a user based on the geographic locations of the user, the origin of the webpage and a content delivery server.
+
+
