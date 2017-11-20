@@ -24,3 +24,80 @@ const quickSort = (array) => {
 }
 
 console.log(quickSort([12,3,4,2,7]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const quickSortMPF = array => {
+	if (array.length < 2 ) {
+		return array;
+	}
+	let pivot = array.splice(Math.floor(array.length / 2), 1);
+	let left = [];
+	let right = [];
+	for (let i = 0; i < array.length; i += 1) {
+		if (array[i] <= pivot) {
+			left.push(array[i]);
+		} else {
+			right.push(array[i]);
+		}
+	}
+	return quickSortMPF(left).concat(pivot, quickSortMPF(right));
+}
+
+let array = [1,232,1381,23981,283,23,23023,192002,2,3,22992]; 
+
+console.log(quickSortMPF(array));
