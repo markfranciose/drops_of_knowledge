@@ -1,4 +1,4 @@
-Array.prototype.clean = (deleteValue) => {
+Array.prototype.mpfremoveAll = (deleteValue) => {
 	for (let i= 0; i < this.length; i += 1) {
 		if (this[i] === deleteValue) {
 			this.splice(i, 1);
@@ -10,4 +10,4 @@ Array.prototype.clean = (deleteValue) => {
 
 let test = ["One", "Two", "Three", "", ""];
 
-console.log(test.clean(""));
+console.log(test.mpfremoveAll(""));

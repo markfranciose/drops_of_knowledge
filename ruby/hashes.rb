@@ -19,3 +19,15 @@ print first_dog
 # this prints a 2-d array:
 first_two_dogs = dog_nicknames.first(2)
 print first_two_dogs
+
+# count of chars in a string
+
+string = "i am a super cool string"
+
+char_hash = Hash.new
+
+string.chars.each do |char|
+	char_hash[char] ? char_hash[char] += 1 : char_hash[char] = 1
+end
+
+puts char_hash
