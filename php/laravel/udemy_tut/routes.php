@@ -22,6 +22,8 @@ use Carbon\Carbon;
 */
 
 
+Route::resource('name', 'NameController');
+
 //
 //Route::get('/about', function () {
 //
