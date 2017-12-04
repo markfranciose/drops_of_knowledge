@@ -37,6 +37,8 @@ puts valid_walk(walk_1)
 puts valid_walk(walk_2)
 puts valid_walk(walk_3)
 
+
+
 # two
 # the single line is perferred by some. But not by me. Over 80 width? newline!
 # the new lines don't mess anything up here... 
@@ -50,3 +52,4 @@ end
 puts valid_walk(walk_1)
 puts valid_walk(walk_2)
 puts valid_walk(walk_3)
+
