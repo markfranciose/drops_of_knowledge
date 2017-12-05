@@ -16,7 +16,7 @@ namespace :your_namespace do
 end
 ```
 
-List rake tasks:
+### List rake tasks:
 
 ```shell 
 rake -T
@@ -25,4 +25,10 @@ rake -T
 search for tasks:
 ```shell
 rake -T | grep search
+```
+
+### Run Multiple Rake Tasks as One Task
+```ruby
+	desc 'reset the database'
+	task reset-db: ["db:drop", "db:create", "db:migrate", "db:seed"]
 ```
