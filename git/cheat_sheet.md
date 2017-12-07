@@ -2,15 +2,9 @@
 
 List local branches
 ```shell
-	git branch
-```
+git branch # list local branches
 
-List local and remote branches:
-```shell
-	git branch -a
-```
+git branch -a # list local and remote branches
 
-List only remote branches:
-```shell
-	git branch -r
+git branch -r # list only remote branches
 ```
