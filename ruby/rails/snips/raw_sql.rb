@@ -9,3 +9,6 @@ result = database.execute(sql_query)
 
 # method below returns a 2-d array of values
 useable_array = result.values
+
+#sql queries within rails
+unfortunate_dog_names = Dogs.where("name LIKE '%poo%'")
