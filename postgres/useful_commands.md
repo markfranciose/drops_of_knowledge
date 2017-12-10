@@ -13,6 +13,11 @@ Import a sql dump into the current DB
 \i 'path/to/database.sql';
 ```
 
+Create a copy of a DB:
+```
+CREATE DATABASE dogs WITH TEMPLATE lists_of_dogs OWNER top_dawg;
+```
+
 Altering a user:
 ```sql
 ALTER USER username WITH PASSWORD 'cool_password_dog';
@@ -20,6 +25,11 @@ ALTER USER username WITH LOGIN;
 ALTER USER username WITH NOLOGIN;
 ```
 
+Find a table with a specific column name:
+```sql
+SELECT table_name FROM information_schema.columns
+WHERE column_name LIKE '%cool%';
+```
 
 ## Errors
 ### When using postgres on a Windows machine getting the error: "character encoding with byte sequence 0xc2 0x80 in encosing "UTF8" has no equivalent in encosind "WIN1252""
@@ -35,6 +45,5 @@ ALTER USER username WITH NOLOGIN;
 	RESET CLIENT_ENCODING
 ```
 [more on encodings and localizations](https://www.postgresql.org/docs/9.3/static/multibyte.html)
-
 
 
