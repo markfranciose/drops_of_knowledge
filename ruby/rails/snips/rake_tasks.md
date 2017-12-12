@@ -32,3 +32,8 @@ rake -T | grep search
 	desc 'reset the database'
 	task reset-db: ["db:drop", "db:create", "db:migrate", "db:seed"]
 ```
+
+### Rake Task in specific environment
+```shell
+rake walk_dogs:normal RAILS_ENV=raining-dogs
+```
