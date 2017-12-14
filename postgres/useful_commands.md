@@ -1,3 +1,10 @@
+```\x #change output```
+
+It's not UNIQUE... it's DISTINCT:
+```sql
+SELECT DISTINCT dog_breed FROM oodles_of_dogs;
+```
+
 Grant all permissions to a user on a DB
 
 ```sql 
@@ -29,6 +36,18 @@ Find a table with a specific column name:
 ```sql
 SELECT table_name FROM information_schema.columns
 WHERE column_name LIKE '%cool%';
+```
+
+DROP everything from a schema:
+```sql
+DROP SCHEMA schema_name CASCADE;
+CREATE SCHEMA schema_name;
+````
+this assumes what you want to do is also remake the schema and add/remake the tables somehow.
+
+DELETE all records from a table:
+```sql
+DELETE FROM dog_table;
 ```
 
 ## Errors
