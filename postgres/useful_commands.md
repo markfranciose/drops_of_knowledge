@@ -1,3 +1,20 @@
+```sql
+# connect
+\c dogbase
+\connect dogbase
+
+# list
+\ds # sequences
+\dt # tables
+```
+
+Show table names and number of records:
+```sql
+SELECT schemaname,relname,n_live_tup 
+  FROM pg_stat_user_tables 
+  ORDER BY n_live_tup DESC;
+```
+
 ```\x #change output```
 
 It's not UNIQUE... it's DISTINCT:
