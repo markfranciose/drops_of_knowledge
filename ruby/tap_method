@@ -1,0 +1,48 @@
+## Uses: 
+# .tap is primarily used for 'tapping' into method chains:
+
+dogs = %w(Larry Curly Moe Josiah Krell Cookie)
+
+dogs.select { |d| d.include? 'o' }    
+    .map { |d| d.upcase }
+    .permutation.to_a               .tap { |a| puts "all permutations #{a.inspect}" }
+    .sample
+    
+# this can be useful for debugging
+
+# More controversially: 
+
+class Dog
+  attr_accessor :tail, :tricks, :legs
+  
+  def learn_trick(trick)
+    tricks << trick
+  end
+end
+
+# this code:
+lassie = Dog.new
+lassie.tail = 'wagging'
+lassie.tricks = ['sitting', 'heeling']
+lassie.legs = 4
+lassie.learn_trick('fetch')
+lassie
+
+# can be written thusly: 
+lassie = Dog.new.tap do |d|
+  d.tail = 'wagging'
+  d.tricks = ['sitting', 'heeling']
+  d.legs = 4
+  d.learn_trick('fetch')
+end
+
+## What is it doing?
+
+class Object
+  def tap
+    yield self  # calls the block 
+    self        # returns self
+  end
+end
+
+
