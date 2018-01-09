@@ -32,10 +32,14 @@ GRANT ALL PRIVILEGES ON DATABASE dog_database to doggy_user;
 ```
 
 Import a sql dump into the current DB
+(within psql)
 * note, even on Windows the slashes must be '/' forward slashes,
 ```sql
 \i 'path/to/database.sql';
 ```
+(from the command line)
+```shell psql already_created_database < oodle_of_dogs.sql```
+
 
 Create a copy of a DB:
 ```
