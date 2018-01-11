@@ -1,3 +1,4 @@
+### The basics:
 ```sql
 # connect
 \c dogbase
@@ -6,6 +7,15 @@
 # list
 \ds # sequences
 \dt # tables
+```
+
+Downcase every field
+```
+UPDATE users SET email=lower(email);
+# to be more selective:
+UPDATE users SET name=lower(name)
+WHERE name !~ '[[:lower:]]'
+# only when in all caps
 ```
 
 Show table names and number of records:
