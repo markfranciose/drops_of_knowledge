@@ -1,50 +1,47 @@
-_Create image using the pwd's Dockerfile_
+####Create image using the pwd's Dockerfile####
 docker build -t someimage 
 
-_Run the 'someimage' mapping port 6666 to 80_
+####Run the 'someimage' mapping port 6666 to 80####
 docker run -p 4000:80 someimage
 
-_As above, but in 'detached' mode_
+####As above, but in 'detached' mode####
 docker run -d -p 4000:80 someimage
 
-_List all running containers_
+####List all running containers####
 docker container ls
 
-_List all containers, including ones not running_
+####List all containers, including ones not running####
 docker container ls -a
 
-_Gracefully stop the container_
+####Gracefully stop the container####
 docker container stop <containerid>
 
-_Force stop of the container_
+####Force stop of the container####
 docker container kill <containerid>
 
-_Remove container from this machine_
+####Remove container from this machine####
 docker container rm <containerid>
 
-_remove all containers_
+####remove all containers####
 docker container rm $(docker container ls -a -q)
 
-_List all images on machine_
+####List all images on machine####
 docker image ls
 
-_Remove an image_
+####Remove an image####
 docker image rm <image id>
 
-_Remove all images_
+####Remove all images####
 docker image rm $(docker container ls -a -q)
 
-_Login_
+####Login####
 docker login
 
-_Tag image_
+####Tag image####
 docker tag <image> username/repo:tag
 
-_Upload image_
+####Upload image####
 docker push username/repo:tag
 
-_Run image from a registry_
+####Run image from a registry####
 docker run username/repo:tag
-
-
-
