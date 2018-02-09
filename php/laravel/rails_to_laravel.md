@@ -1,3 +1,8 @@
+## Dependency Management
+rails: bundler
+laravel: composer
+
+
 rails c
 php artisan tinker
 
