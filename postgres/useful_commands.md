@@ -1,3 +1,4 @@
+### The basics:
 ```sql
 # connect
 \c dogbase
@@ -6,6 +7,15 @@
 # list
 \ds # sequences
 \dt # tables
+```
+
+Downcase every field
+```
+UPDATE users SET email=lower(email);
+# to be more selective:
+UPDATE users SET name=lower(name)
+WHERE name !~ '[[:lower:]]'
+# only when in all caps
 ```
 
 Show table names and number of records:
@@ -32,10 +42,14 @@ GRANT ALL PRIVILEGES ON DATABASE dog_database to doggy_user;
 ```
 
 Import a sql dump into the current DB
+(within psql)
 * note, even on Windows the slashes must be '/' forward slashes,
 ```sql
 \i 'path/to/database.sql';
 ```
+(from the command line)
+```shell psql already_created_database < oodle_of_dogs.sql```
+
 
 Create a copy of a DB:
 ```

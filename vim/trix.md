@@ -3,6 +3,20 @@ Delete empty lines:
 :v/./d
 ```
 
+
+Add char to end of a line/every line:
+```
+:%norm A,
+:11,20norm A,
+:%s/$/,
+```
+
+Add to start of a line:
+```
+:s/^/#
+:%s/^/#
+```
+
 Append to end of every line:
 ```
 :%s/$/<--- ending dog
@@ -22,3 +36,4 @@ method 2:
 norm	- type the following commands
 A			- append
 woof  - text to append
+
