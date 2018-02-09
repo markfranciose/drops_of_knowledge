@@ -17,3 +17,9 @@ case changing, casing, magic:
 # .camelize
 "snake_dog".camelize				# => "SnakeDog"
 ```
+
+find the PID of the server
+```shell
+$ cat ~/rails_project/tmp/pids/server.pid
+=> 1234
+```
