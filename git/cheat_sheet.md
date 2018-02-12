@@ -6,8 +6,23 @@ git branch # list local branches
 git branch -a # list local and remote branches
 git branch -r # list only remote branches
 ```
-Squash multiple recent local commits into one:
+
+Compare 2 branches
 ```shell
-git reset --soft HEAD~20 &&
-git commit
+git diff branch_1..branch_2
+
+# compare from common ancestor
+git diff branch_1...branch_2
 ```
+
+
+
+
+
+
+
+
+
+
+
+
