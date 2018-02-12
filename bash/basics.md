@@ -21,3 +21,12 @@ else
   echo "must just be a dog
 fi
 ```
+
+Multi-line comments
+```shell
+: '
+This is a 
+multi-line comment 
+in bash
+'
+```
