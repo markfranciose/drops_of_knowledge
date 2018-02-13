@@ -37,3 +37,8 @@ norm	- type the following commands
 A			- append
 woof  - text to append
 
+
+Get location of .vimrc in use:
+```
+:echo $MYVIMRC
+```
