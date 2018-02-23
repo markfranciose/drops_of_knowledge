@@ -7,6 +7,10 @@
 # list
 \ds # sequences
 \dt # tables
+
+# column width, column wrapping
+\pset format wrapped
+\pset columns 100 
 ```
 
 Downcase every field
