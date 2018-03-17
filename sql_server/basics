@@ -1,0 +1,4 @@
+sqlcmd:
+```
+sqlcnd -S _=system-name\MSSQLSERVER01 -E
+```
