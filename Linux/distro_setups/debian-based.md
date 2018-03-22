@@ -22,3 +22,11 @@ mysql:
 ```shell
 sudo apt-get install mysql-server
 ```
+
+python:
+```
+python3 -V # should be installed
+sudo apt-get install -y python3-pip
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+```
+
