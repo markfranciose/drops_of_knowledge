@@ -60,3 +60,12 @@ ALTER TABLE dogs.top_dags
 ADD CONSTRAINT PK_top_dawgs_id PRIMARY KEY CLUSTERED (id);
 GO
 ```
+
+remove primary key
+```sql
+USE dog_base;
+GO
+ALTER TABLE dogs.top_dags
+DROP CONSTRAINT PK_top_dawgs_id;
+GO
+```
