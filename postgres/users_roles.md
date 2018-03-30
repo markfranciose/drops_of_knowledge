@@ -18,3 +18,8 @@ INHERIT
 LOGIN
 REPLICATION
 ```
+
+### Check which use you're signed in as current user
+```sql
+SELECT current_user
+```
