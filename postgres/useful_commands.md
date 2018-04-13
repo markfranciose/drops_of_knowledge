@@ -22,6 +22,11 @@ WHERE name !~ '[[:lower:]]'
 # only when in all caps
 ```
 
+Export as .csv: 
+```
+\copy (SELECT * FROM things_you_want_to_query) To '/home/absolute/path/to_new_file.csv' With CSV
+```
+
 Show table names and number of records:
 ```sql
 SELECT schemaname,relname,n_live_tup 

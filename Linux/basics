@@ -1,0 +1,2 @@
+_symlinks_
+$ ln -s /thing/to/which/im/linking /new/symlink
