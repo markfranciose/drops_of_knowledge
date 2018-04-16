@@ -59,6 +59,9 @@ params.permit(perferences: {})
 params.require(:anything_goes).permit!
 
 # Nesting params
+#
+params.require(:user).permit!
+
 
 params.permit(:name, { emails: [] }, friends: [:name, hobbies: []] )
 # and so on...

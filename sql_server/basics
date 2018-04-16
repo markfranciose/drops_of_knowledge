@@ -1,0 +1,71 @@
+sqlcmd:
+```
+sqlcnd -S _=system-name\MSSQLSERVER01 -E
+```
+
+autoincrement identity:
+```sql
+CREATE TABLE dogs 
+(
+  id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+  name VARCHAR(300)
+);
+GO
+```
+
+drop delete a table:
+```sql
+DROP TABLE bad_dogs;
+```
+
+rename a table:
+```
+EXEC sp_rename 'dogs.top_dogs', 'best_dogs';
+```
+
+add column:
+```sql
+ALTER TABLE dogs.best_dogs ADD collar_color VARCHAR(20) NULL, years INT NOT NULL;
+```
+
+drop column:
+```sql
+ALTER table big_dogs
+DROP COLUMN ear_size;
+```
+
+alter modify change column type
+```sql
+ALTER TABLE dogs
+ALTER COLUMN legs INT;
+```
+
+create primary key - new table
+```sql
+USE dog_base;
+GO
+CREATE TABLE dogs.bad_dawgs
+(
+  dog_id INT IDENTITY(1,1) NOT NULL,
+  CONSTRAINT PK_bad_dawgs_id PRIMARY KEY CLUSTERED (id)
+);
+GO
+```
+
+create primary key - existing table
+```sql
+USE dog_base;
+GO
+ALTER TABLE dogs.top_dags
+ADD CONSTRAINT PK_top_dawgs_id PRIMARY KEY CLUSTERED (id);
+GO
+```
+
+remove primary key
+```sql
+USE dog_base;
+GO
+ALTER TABLE dogs.top_dags
+DROP CONSTRAINT PK_top_dawgs_id;
+GO
+```

@@ -80,3 +80,8 @@ const dogUser2 = {
 
 dogUser2.setName('Curly Smithwick');
 console.log("The dog's name is " + dogUser2.firstName);
+
+// Returning an object from an arrow function:
+// w/o the parens, it will assume that the curly brackets are the fumction body.
+const dog = () => ({name: "fido"})
+
