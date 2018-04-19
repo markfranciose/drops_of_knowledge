@@ -20,13 +20,15 @@ git clean -n # shows you the files
 git clean -f # force deletes the files
 ```
 
+change email - single repo
+```shell
+git config user.email "steve.irwin@crocs.net"
+git config user.name  "Steve Irwin"
+```
 
-
-
-
-
-
-
-
-
+change email - all repos
+```shell
+git config --global user.email "wendy.richter@wwe.com"
+git config --global user.name  "Wendy Richter"
+```
 
