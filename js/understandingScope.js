@@ -131,8 +131,9 @@ function bar() {
 
 bar();
 foo; // bar
-bam; // yay, as it was made into a global var at run time.
-baz(); // not defined / declared
+// *note, this seems to behave differently between Node and the browser... ????????????????????????????
+//e bam; // yay, as it was made into a global var at run time.
+//e baz(); // not defined / declared
 
 /* c - hey global scope, have a variable foo, know it?
    gs - nope, I'll put it in the red bucket.
@@ -193,3 +194,265 @@ unfulfilled RHS, Undeclared. Reference Error.
 
 The compiler has put the scope with the var, static scope. can't change and make decisions at runtime.
 
+// unnamed/ anonymous Function Expressions
+let clickHandler = function() {
+	// code
+};
+
+// named function 
+let keyHandler = function keyHandler() {
+	// code
+} 
+
+default is to used anon function expression.
+Benefits to named function expression.
+(1) Handy function self-refernce.
+		- if you want to recurse the function, the named
+		  function is in the enclosed namespace. with an anon function (eg. you 
+		  are calling the const, you're pulling froma global namespace that you
+		  don't control)
+
+*/
+
+// let coolFunction = "ok";
+// some other part of the codebase might be bringing in the above which 
+// cause an error.
+const coolFunction = () => {
+	console.log(coolFunction);
+}
+
+coolFunction();
+
+/*
+	(2) more debuggable stack traces.
+*/
+
+let lengther = enump => {
+	console.log("jimmy");
+	console.log("jimmy");
+	console.log("jimmy");
+	console.log("jimmy");
+	console.log("jimmy");
+	let a = 1 - 1; 
+	console.log("jimmy");
+//e	let length = enump.length // this is the example error we're tracing
+	console.log("jimmy");
+	console.log("jimmy");
+	console.log("jimmy");
+	console.log("jimmy");
+	console.log("jimmy");
+} 
+
+console.log(lengther([1,2]));
+
+let bigFunc = thing => {
+	console.log(thing);
+	console.log(lengther(thing));
+}
+
+bigFunc(undefined); 
+// this does look pretty debuggable in node
+// if it was minified, and in browser, would be harder to
+// see
+
+/*
+  (3) More self-documenting code.
+*/
+
+// Lexical scope. v. dynamic scope.
+// lexical - determining the vars at 'compile' time, not runtime
+
+// Demonstrating an example of lexical scope.
+function lexicalExample() {
+	let varExample = "example";
+
+	function lexicalReference() {
+		console.log(varExample);
+	}
+
+	lexicalReference();
+}
+
+lexicalExample();
+
+
+/*
+function theoreticalDynamicScope() {
+	console.log(varExample); // dynamic
+}
+
+function varInside() {
+	var varExample = "dogs";
+	theoreticalDynamicScope();
+}
+
+function differentVarInside() {
+	var otherVariable = "cats";
+	theoreticalDynamicScope();
+}
+
+varInside();
+*/ 
+console.log("-------------------------------")
+
+// Function scoping
+var sittingDuck = "quack"; 
+
+
+var sittingDuck = "moooo";
+console.log(sittingDuck);
+
+
+console.log(sittingDuck);
+
+// solution: put moo inside a function.
+
+console.log("-------------------------------")
+var expressiveVariable = "quack";
+
+function temporaryCase() {
+	var expressiveVariable = "mooo";
+	console.log(expressiveVariable);
+}
+temporaryCase();
+
+console.log(expressiveVariable);
+
+// good part is that we've got a function to enclose temp
+// bad part is that we now have temporaryCase in the global namespace.
+// How do we create a scope w/o polluting namespce.
+
+// what actually happens on line 317:
+(temporaryCase)(); // resolve the expression, look up the value. THEN, call func
+
+
+console.log("-------------------------------")
+// IFFE
+
+var popularVariable = "user";
+
+// this is a function expression because function is not the first word.
+// example IFFE is not going into the global namespace. 
+( function exampleIFFE() {
+		var popularVariable = "login";
+		console.log(popularVariable);
+})();
+
+console.log(popularVariable);
+// IFFEs are often used to wrap an entire file.
+
+// IFFE II
+
+for (var i = 0; i < 5; i += 1) {
+	( function loopIFFE() {
+			var j = i;
+			console.log(j);
+	})();
+}
+
+// Block Scoping
+// there are side effects to IFFE.
+
+function differenceVar(number1, number2) {
+	if (number1 > number2) {
+		var tempNumber = number1;
+		number1 = number2;
+		number2 = tempNumber;
+	}
+
+	console.log(tempNumber);
+
+	return number2 - number1;
+}
+
+differenceVar(4,2);
+
+function differenceLet(number1, number2) {
+	if (number1 > number2) {
+		let tempNumber = number1;
+		number1 = number2;
+		number2 = tempNumber; 
+	}
+
+	// would throw a ReferenceError.
+	//e console.log(tempNumber);
+
+	return number2 - number1;
+}
+
+differenceLet(4,2);
+
+// example - creating an explicit let block:
+
+// at first glance, not sure what this adds.
+function formatString(string) {
+	// separate and upcase 1st three letters
+	{ let prefix, rest;
+			prefix = string.slice(0,3);
+			rest = string.slice(3);
+			string = prefix.toUpperCase() + rest;
+	}
+
+	// words that start with "DOG" should remain the same
+	if (/^DOG/.test( string )) {
+		return string; 
+	}
+
+	// all other words return the 5th letter on... 
+	return string.slice(4);
+}
+
+
+console.log("------------------------------")
+
+function fibonacci(number) {
+
+	if (number <= 1) {
+		return 1; 
+	}
+
+	return fibonacci(number - 1) + fibonacci(number -2)
+
+}
+
+console.log(fibonacci(6));
+
+// one-line monstrosity
+const fibo = n => n <= 1 ? 1 : fibo(n-1) + fibo(n-2)
+console.log(fibo(6));
+
+var f=n=>n<=1?1:f(n-1)+f(n-2)
+
+console.log(f(6));
+
+console.log("------------------------------")
+// better to use let in a for loop
+// var signals that you want a variable to be scoped to the function
+// there's some weirdness in here. why calling the function w/ 2 params?
+function repeat(functionToUse, number) {
+	var result;
+
+	for (let i = 0; i < number; i += 1) {
+		result = functionToUse(result, i);
+	}
+
+	return result;
+}
+
+function consoleLogger(){
+	console.log("okokok");
+}
+
+repeat(consoleLogger, 3);
+
+// aside, the Ruby integer.times() method
+function times(func, number) {
+
+	for(let i = 0; i < number; i += 1) {
+		func();
+	}
+
+	return number
+}
+
+// ~2:15 - on try/catch

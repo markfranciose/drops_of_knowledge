@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Let scoping creation example</title>
+	</head>
+	<body>
+		<h2>Let scoping example</h2>
+		<h4>Check out the console & the code</h4>
+
+		<p>A let variable declared in a file, or in a separate script
+		tag doesn't get block scoped to that file or script. Only if 
+		enclosed in an explicit block (around the file, or around some
+		scope above the usage) will the let-declared variable not be
+		available globally. 
+
+		However, part II, a variable declared with let is NOT a property
+		of the global object, so <code>window.letVariable</code> would be
+		undefined
+		</p>
+
+		<script>
+			let letVariable = "I am a variable declared with let."
+			var varVariable = "I am a variable declared with var."
+			{ 
+				let explicitBlockLet = "Help, help, I am enclosed!"
+			}
+			
+		</script>
+
+		<script>
+			console.log(letVariable);
+			console.log(varVariable);
+			try {
+				console.log(explicitBlockLet);
+			}
+			catch(error) {
+				console.error("Here is our error")
+				console.error(error);
+			}
+		</script>
+			
+		<script>
+			console.log(window.letVariable);
+			console.log(window.varVariable);
+		</script>
+
+	</body>
+</html>
