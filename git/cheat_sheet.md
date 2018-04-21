@@ -1,10 +1,16 @@
 ### Checking branches:
 
-List local branches
+List branches
 ```shell
 git branch # list local branches
 git branch -a # list local and remote branches
 git branch -r # list only remote branches
+```
+
+Checkout remote branch
+```shell
+git checkout remote-branch # a single remote being tracked
+git checkout -b remote-branch someremote/remote-branch # when tracking multiple remotes
 ```
 
 Compare 2 branches
