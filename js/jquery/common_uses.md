@@ -33,3 +33,9 @@ $(document).ready( () => {
 // shorthand
 $(() => console.log("Woof on one (harder to understand) line"))
 ```
+
+### remove click handler
+```
+$("my-selector").off() // remove all event handlers
+$("body").off("click", "selector", specificFunction); // remove single func
+```
