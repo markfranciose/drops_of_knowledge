@@ -1,3 +1,5 @@
+const minDescription = 5;
+
 function initUI() {
 	$workEntryForm = $("[rel*=js-work-entry-form");
 	$workEntrySelectProject = $workEntryForm.find("[rel*=js-select-project]");
@@ -28,7 +30,14 @@ function initUI() {
 }
 
 function validateWorkEntry(description,minutes) {
-	// TODO
+	// since these parameters are always coming in from a web form, they're always going
+	// to be strings. Although, to be super-future proof, someone might coerce them earlier
+	// later on down the road... 
+	return description.length > minDescription &&
+		   minutes !== "" &&
+		   minutes >= 0 &&
+		   minutes <= 600;
+	// this relies on 
 }
 
 function addProject(description) {
