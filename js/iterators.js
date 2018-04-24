@@ -174,6 +174,11 @@ var verySpookyDogs = {
 			"Stinky"
 		]
 	},
+	// you can't call a property `Symbol.iterator` (or anything.anything)
+	// use a computed property name.
+	[Object.toString]() {
+		return "yatta";
+	},
 	[Symbol.iterator](){
 
 		// declare a var, assign to 2d array of each dog group.
@@ -213,3 +218,5 @@ var verySpookyDogs = {
 };
 
 console.log(...verySpookyDogs);
+console.log(verySpookyDogs[Object.toString]());
+console.log(verySpookyDogs.toString());
