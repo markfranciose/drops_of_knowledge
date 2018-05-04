@@ -1,8 +1,23 @@
 _#API - Application Programming Interfaces
 Provide functionality
 
+_#HTTP - Hypertext Transfer Protocol
+
+_# MIME - Multipurpose Internet Mail Extensions 
+Standardized way to indicate the nature and format of a document.
+Browsers will often use the MIME type to decide how to process a
+document
+
 _#ORM - Object Relational Mapping aka Object Relational Management. 
 How do we take relational data - databases that store data in columns, rows, tables - and use it in an object-oriented programming language. We want the data to be arrays, strings... etc.
+
+_#URI - Uniform Resource Identifier 
+String of characters used to identify a resource.
+
+_#URL - Uniform Resource Location
+'web address', all URLs are URIs. (URNs, are URIs that are not URLs)
+in common usage, this is synonomous with URI.
+
 
 
 
