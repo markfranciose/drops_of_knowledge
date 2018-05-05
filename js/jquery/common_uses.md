@@ -39,3 +39,8 @@ $(() => console.log("Woof on one (harder to understand) line"))
 $("my-selector").off() // remove all event handlers
 $("body").off("click", "selector", specificFunction); // remove single func
 ```
+
+### toggle visibilty of element:
+```javascript
+$("my-selector").toggle();
+```
