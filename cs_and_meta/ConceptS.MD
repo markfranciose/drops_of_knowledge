@@ -21,6 +21,10 @@ me._name // Returns undefined because I am not within scope to access
 me.getName() // Returns "Mark F." because the reference to _name is still there.
 ```
 
+## Dependency Injection
+### defns:
+	#. One object supplies the dependencies of another object
+
 ## Floating-Point (Arithmetic)
 ### defns:
 	arithmetic using formulaic representations of real numbers as an approximation so as to support a trade-off between range and precision.
