@@ -13,3 +13,8 @@ document.onreadystatechange = function() {
 }
 // there are other options beside 'interactive' on L10. More info on MDN. 
 ```
+
+Alter disabled property of an element
+```javascript
+document.getElementById("some-button").disabled = false;
+```
