@@ -24,6 +24,7 @@ var arr = [1,2,3,4,5];
 Array.isArray(arr); // returns true
 
 // Don't use the new keyword with type checking... 
+// this has to do with the difference between a 'string' primative and a 'String' object
 
 var string = new String('string');
 typeof string; // returns 'object'
@@ -38,3 +39,20 @@ typeof func; // returns 'function'
 
 // Calling typeof function, behaves as you would expect.
 typeof function() {} === 'function'; // returns true
+
+
+
+
+// Check whether an object is a string literal or a String Object:
+var stringLiteral = "I am a string";
+var stringObject  = new String("I am also a string");
+
+////////////////////////type checking a String object /////////////////////
+console.log(stringObject instanceof String); // => true
+console.log(typeof(stringObject) == 'string'); // => false
+console.log(typeof(stringObject) == 'object'); // => true
+
+/////////////////////////type checking string primative ///////////////////
+console.log(stringLiteral instanceof String); // => false
+console.log(typeof(stringLiteral) == 'string'); // => true
+console.log(typeof(stringLiteral) == 'object'); // => false 

@@ -1,6 +1,7 @@
 ## Functions that work like you think they will:
 
 ```javascript
+  // .includes(..)
 	var str = 'To be, or not to be, that is the question.';
 
 	console.log(str.includes('To be'));       // true
