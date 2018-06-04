@@ -38,3 +38,10 @@ git config --global user.email "wendy.richter@wwe.com"
 git config --global user.name  "Wendy Richter"
 ```
 
+
+revert to previous commit (see what this actually does - TODO - give a susinct explanation of what this is)
+```shell
+git revert HEAD
+```
+
+
