@@ -9,6 +9,16 @@ Labels:
 </form>
 ```
 
+### Select
+
+Set a default, unselectable value for a select field:
+```html
+<select>
+		<option value="" disabled selected>Select an option<option>
+		<option value="real-value">Real Value</option>
+</select>
+```
+
 
 ### Inputs
 
