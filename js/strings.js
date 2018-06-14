@@ -1,15 +1,20 @@
+/////////////////////////////////////////////////////////////////////////
+// _#.test() _#regex _#js _#string _#match //////////////////////////////
+// .test() is a method called on a regex object that searches for a /////
+// match and returns a boolean. /////////////////////////////////////////
+
 var string = "the best things in life are free"
-
 var patt = new RegExp("e");
+console.log(patt.test(string)); // => true
 
-console.log(patt.test(string));
+console.log(/^y/.test("yellow")); // => true 
 
 var test2 = /(a|b)/.test("balling");
-
 console.log(test2);
 
-// the match() method retrieves the matches when matching a stringagainst a
-// regexp
+/// because it returns a boolean, and is rather un-quirky, .test() is ///
+/// the best method for checking a pattern in a string //////////////////
+/////////////////////////////////////////////////////////////////////////
 
 var allCaps = "THIS MESSAGE IS IN ALL CAPS";
 var notAnymore = allCaps.toLowerCase();
@@ -42,6 +47,8 @@ console.log(count); // returns 3, 'th*is is is'
 
 console.log("The dog ordered Dominos".includes('dog')); // logs true
 
+// the match() method 
+// regex
 // String.match() function
 // match has some quirks to it...
 

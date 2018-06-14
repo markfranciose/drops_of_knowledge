@@ -30,3 +30,35 @@ sudo apt-get install -y python3-pip
 sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 ```
 
+docker:
+```
+# docker dependencies
+#     apt-transport-https
+#     ca-certificates
+#     curl
+#     gnupg2
+#     software-properties-common
+
+# add docker GPG key
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+
+# (test key, current 0EBFCD88)
+sudo apt-key fingerprint 0EBFCD88
+
+# add repo, append edge after 'stable' to add edge repo
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt update
+
+sudo apt install docker-ce
+```
+
+yarn:
+```
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+```

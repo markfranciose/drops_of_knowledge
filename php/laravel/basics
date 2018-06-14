@@ -1,0 +1,6 @@
+print to STDOUT:
+```php
+		$string = "This is indeed a string";
+		
+		error_log($string);
+```

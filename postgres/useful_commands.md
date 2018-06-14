@@ -5,8 +5,10 @@
 \connect dogbase
 
 # list
-\ds # sequences
-\dt # tables
+\l # list databases
+\ds # list sequences
+\dt # list tables
+\du # list users
 
 # column width, column wrapping
 \pset format wrapped
@@ -20,6 +22,11 @@ UPDATE users SET email=lower(email);
 UPDATE users SET name=lower(name)
 WHERE name !~ '[[:lower:]]'
 # only when in all caps
+```
+
+Export as .csv: 
+```
+\copy (SELECT * FROM things_you_want_to_query) To '/home/absolute/path/to_new_file.csv' With CSV
 ```
 
 Show table names and number of records:
@@ -53,6 +60,11 @@ Import a sql dump into the current DB
 ```
 (from the command line)
 ```shell psql already_created_database < oodle_of_dogs.sql```
+
+export db - sql dump:
+```shell
+pg_dump db_name > file.out
+```
 
 
 Create a copy of a DB:
