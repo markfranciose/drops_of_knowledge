@@ -169,3 +169,80 @@ let testArray2 = [1,2,3,4,5,6,7]
 console.log(binaryAgain(testArray2, 4))
 console.log(binaryAgain(testArray2, 1))
 console.log(binaryAgain(testArray2, 7))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("-----------------------------------------------")
+function binaryTheSearch(list, target) {
+	var lower = 0;
+	var upper = list.length; 
+	var middle = Math.floor((upper - lower) / 2);
+	var guess = list[middle];
+
+	while (lower <= upper) {
+		if (guess === target) {
+			return middle;
+		} 
+		else {
+			if (guess > target) {
+				upper = middle - 1;				
+			}
+			else {
+				lower = middle + 1
+			}
+		}
+	}
+}
+
+let testArray3 = [1,2,3,4,5,6,7]
+console.log(binaryTheSearch(testArray3, 4))
+console.log(binaryTheSearch(testArray3, 3))
+console.log(binaryTheSearch(testArray3, 7))
