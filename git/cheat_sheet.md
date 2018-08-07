@@ -38,10 +38,23 @@ git config --global user.email "wendy.richter@wwe.com"
 git config --global user.name  "Wendy Richter"
 ```
 
-
 revert to previous commit (see what this actually does - TODO - give a susinct explanation of what this is)
 ```shell
 git revert HEAD
 ```
 
+### Stashing Commits
+```shell
+git stash
+```
+apply the stash:
+```shell
+git stash apply stash@{2}
+git stash apply 2 # newer versions
+```
+pop the stash:
+```shell
+git stash pop stash@{2}
+
+```
 
