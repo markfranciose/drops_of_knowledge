@@ -1,37 +1,45 @@
 // Arrow functions:
-// some shorthand syntax:
 
-// on a oneline arrow function don't need to declare explicit return
+///////////////////////some shorthand syntax///////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+////////////one line arrow functions don't need explicit return////////////
 const arrowFunctionOne = () =>	"My dog drinks from the sink"
 console.log(arrowFunctionOne());
 
-// including the return on a one liner will throw a SyntaxError
-//e const arrowWillError = () => return "My dog drinks from the toilet"
+///////////including return w/o parents throws a SyntaxError/////////////// 
+//e var arrowWillError = () => return "My dog drinks from the toilet"    //
 
-const arrowNotImplicit = () => {
-	"My dog drinks from the shower"
-}
-
+//////////////////////with parens return is fine///////////////////////////
+const arrowNotImplicit = () => { return "My dog drinks from the shower" } 
 console.log(arrowNotImplicit());
+
+///////////explicit return is ONLY for one-line arrow functions////////////
+var regularUndefined = () => {
+	"This will return undefined, like a normal function";
+}
+console.log(regularUndefined());
 
 // correct way to write a multi-line arrow function
 const arrowExplicitReturn = () => {
 	return "My dog gave up drinking";
 }
-
 console.log(arrowExplicitReturn());
 
 // with only one argument, don't need parens
 const noParens = coolDude => coolDude + "is a cool dude."
-
 console.log(noParens("Mark the dog "));
 
 // with 2 args, need parens
 // this will throw a syntax error
 //e const noParens2Args = coolDude, radDude => coolDude + " " + radDude
 
-const threeCoolDudes = (dudeOne, dudeTwo, dudeThree) => "There aren't that many cool dudes. Only dogs"
-console.log(threeCoolDudes());
+var twoCoolDudes = (dudeOne, dudeTwo) => `${dudeOne} and ${dudeTwo} rock!`
+console.log(twoCoolDudes());
+
+function oneCoolDude(dude) {
+	return `${dude} sure is cool`;
+}
+console.log(oneCoolDude());
 
 const dogUser = {
 	firstName: '',

@@ -7,3 +7,8 @@ const showName = (first, last) => {
 
 	return makeFullName();
 }
+
+console.log(showName("one", "two"));
+
+// the return of showName, makeFullName() retains access to nameIntro
+// this is not a very good example.
