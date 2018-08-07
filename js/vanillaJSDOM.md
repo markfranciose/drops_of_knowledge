@@ -53,7 +53,6 @@ Once an element is selected, it can be modified like all other objects.
 let goodDog = document.querySelector('.thats-a-good-boy');
 
 goodDog.hidden = true;
-goodDog.fleaRidden = false;
 ```
 
 the .classList property modifies the element's classes: 
@@ -63,4 +62,39 @@ goodDog.classList.remove('barking');
 goodDog.classList.toggle('go-for-walk');
 ```
 
+also .className:
+```javascript
+goodDog.className += " huffing";
+```
+
+```javascript
+goodDog.style.color = "peru";
+```
+
+## "Custom" Attributes:
+
+.setAttribute(name, value);
+Sets the value of an attribute on the specified element. If the attribute exists, value is updated. Otherwise, new attribute atted.
+```html
+	<div id="dog-star">
+		<p> I am the dog star </p>
+  </div>
+```
+
+```javascript
+element.getElementById("dog-star").setAttribute("isSupernova", "ruh roh");
+```
+However, these attributes cannot be accessed by normal dot notation:
+You have to use the ```getAttribute(..)``` function.
+```
+  var trouble = element.getElementById("dog-star").isSupernova // undefined
+  var realTrouble = element.getElementById("dog-star").getAttribute("isSupernova");
+```
+
+
+
+
 ### Nodelist
+
+
+
