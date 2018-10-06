@@ -16,8 +16,16 @@ git checkout -b remote-branch someremote/remote-branch # when tracking multiple 
 Compare 2 branches
 ```shell
 git diff branch_1..branch_2
+```
+below: diff of the changes in branch_2 since it diverged from branch_1, but don't show any of the new changes in branch_1
+```shell
 # compare from common ancestor
 git diff branch_1...branch_2
+```
+
+compare a file:
+```shell
+git diff branch_1..branch_2 -- my_file.txt
 ```
 
 remove untracked files
@@ -56,5 +64,16 @@ pop the stash:
 ```shell
 git stash pop stash@{2}
 
+```
+
+
+### cleaning up
+removing local branches:
+```
+git branch -d old_branch
+git branch -D old_branch
+```
+-D will delete even if the branch has not been pushed to its remote.
+-d won't TODO - veridy this
 ```
 
