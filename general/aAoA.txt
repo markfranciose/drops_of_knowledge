@@ -11,6 +11,10 @@ document
 _#ORM - Object Relational Mapping aka Object Relational Management. 
 How do we take relational data - databases that store data in columns, rows, tables - and use it in an object-oriented programming language. We want the data to be arrays, strings... etc.
 
+_#REST - Representational State Transfer
+
+_#SOAP - Simple Object Access Protocol
+
 _#URI - Uniform Resource Identifier 
 String of characters used to identify a resource.
 

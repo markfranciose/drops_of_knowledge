@@ -34,6 +34,14 @@ me.getName() // Returns "Mark F." because the reference to _name is still there.
 ### defns:
 	1. a style of object-oriented programming in which classes are not explicitly defined, but rather derived by adding properties and methods to an instance or another class or, less frequently, adding them to an empty object.
 
+## REST
+### defn:
+	1. Representational State Transfer. An architecture style that defines constraints and properties based on HTTP. Allow the access & manipulation of web resources by a set of exposed operations.
+
+## SOAP
+### defn:
+	1. Originally "Simple Object Access Protocol", a messaging protocol for exchanging structured data via web services in computer networks. Uses XML, mostly enterprise usage - largely replaced by REST.
+
 ## Scope
 ### defn
 	1.
