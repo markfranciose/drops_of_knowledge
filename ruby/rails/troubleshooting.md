@@ -24,3 +24,7 @@ add the following line to the Gemfile:
 ```ruby
 gem 'bcrypt', platforms: :ruby
 ```
+
+
+Error message ```ActionController::RoutingError (No route matches [OPTIONS]```
+problem: rails doesn't process OPTIONS requests. install rack-cors gem
