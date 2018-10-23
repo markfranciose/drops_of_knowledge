@@ -60,6 +60,8 @@ params.require(:anything_goes).permit!
 
 # Nesting params
 #
+#
+params.permit! # this will allow anything through.
 params.require(:user).permit!
 
 
