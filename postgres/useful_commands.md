@@ -9,6 +9,9 @@
 \ds # list sequences
 \dt # list tables
 \du # list users
+\di # list indexes
+\dv # list views
+\dn # list schemas
 
 # column width, column wrapping
 \pset format wrapped
