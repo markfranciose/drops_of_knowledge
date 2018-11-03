@@ -26,5 +26,5 @@ S3 - Simple Storage Service
 Highly scalable, durable cloud object storage.
 
 VPC - Virtual Private Cloud
-A cloud within a cloud.
+A cloud within a cloud. Virtual Networking.
 
