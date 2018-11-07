@@ -58,3 +58,40 @@ always going to lose 5
 - allow auto public IP for the one we just put in the public route table
 
 - create instance, select correct VPC and subnet. security groups are VPC-specific. won'y be able to select security groups from default VPC.
+
+
+## Lab part 2 - connecting to private subnet from public one.
+
+## NAT Instances & Gateways
+NAT instances - on the way out. 
+nat on search for instance type, default everything but put it into new VPC, public subnet 
+go w/ defaults. 
+on NAT instances, have to disable the Source/Destination checks.
+
+Add a route table w/ a rule for 0.0.0.0/0 to NAT instance 
+the private subnet has a way out to the internet now. 
+
+- terminate NAT instance
+
+- better way NAT Gateway, on sidebar under VPC
+
+go over comparisson of NAT gateway vs. NAT instance on AWS documentation 
+10:43, look at the network diagram
+
+Exam tips - NAT instances
+- When creating a NAT instance, disable source/destination check
+- NAT instances must be in a public subnet
+- There must be a route out fo the private subnet ot the NAT instance
+- The amount of traffice the NAT intance can support depends on the instance size. If you're bottlenecking, increase the instance size/
+- can create high availability using autoscale groups, multiple subnets in diff AZs and scripts to automate failover
+
+NAT gateway
+- preferred by enterprise
+- scale automatically to 10Gbps
+- no patching
+- not associated with a security group, 
+- assigned a public IP
+- update route tables when creating. Have to be in multiple AZs.
+- More secure than NAT instances
+
+ 
