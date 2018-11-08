@@ -3,7 +3,6 @@ Delete empty lines:
 :v/./d
 ```
 
-
 Add char to end of a line/every line:
 ```
 :%norm A,
@@ -42,3 +41,9 @@ Get location of .vimrc in use:
 ```
 :echo $MYVIMRC
 ```
+
+Go to position ```xyz```
+```
+:goto 4200
+```
+Takes you to the 4200th byte in the buffer
