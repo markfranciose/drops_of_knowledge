@@ -21,6 +21,19 @@ Set a default, unselectable value for a select field:
 
 
 ### Inputs
+additional HTML5 input types:
+color
+date
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
 
 #### Radio
 
