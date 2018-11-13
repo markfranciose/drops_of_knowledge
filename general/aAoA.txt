@@ -1,6 +1,9 @@
 _#API - Application Programming Interfaces
 Provide functionality
 
+_#APT - Advanced Package Tool
+Package management in Debian-derived Linux flavors
+
 _#DNS - Domain Name System
 System for taking a human friendly name and converting it to an IP.
 
@@ -24,8 +27,4 @@ String of characters used to identify a resource.
 _#URL - Uniform Resource Location
 'web address', all URLs are URIs. (URNs, are URIs that are not URLs)
 in common usage, this is synonomous with URI.
-
-
-
-
 
