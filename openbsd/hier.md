@@ -8,6 +8,7 @@ More interesting aspects
 /bsd.rd  installation kernel
 /bsd.sp  pure kernel executable for single processor machines
 /etc     system configuration
+         /installurl  default repo for packages
          /rc.d  packages, scripts, config for ```rc```
          /skel  sample dotfiles
          /ssh   ssh/d config

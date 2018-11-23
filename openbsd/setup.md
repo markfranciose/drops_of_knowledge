@@ -15,4 +15,8 @@ ChallengeResponseAuthentication no
 find the sshd pid ```ps -aux | grep sshd```
 send HUP to it with ```kill -HUP <sshd pid>```
 
+### packages
+make sure ```/etc/installurl``` points to a correct repo. Such as:
+```https://cdn.openbsd.org/pub/OpenBSD/```
+
 
