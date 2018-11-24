@@ -1,3 +1,5 @@
+Installation instructions for platforms are in INSTALL.<platform>
+
 ### basic locking on new server create
 ```adduser``` will create the user with a familiar interactive prompt
 be sure to add the user to the ```wheel``` group, will want it to be able to execute commands as a root user.
