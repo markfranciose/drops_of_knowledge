@@ -10,3 +10,6 @@ _open
 ```shell
 xdg-open file.mp3
 ```
+
+list of groups, members
+```/etc/groups```

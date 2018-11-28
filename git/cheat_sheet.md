@@ -77,3 +77,10 @@ git branch -D old_branch
 -d won't TODO - veridy this
 ```
 
+### Changing previous commits
+### BEFORE PUSHING TO REMOTE BRANCH
+```shell
+git rebase -i HEAD~4
+```
+
+

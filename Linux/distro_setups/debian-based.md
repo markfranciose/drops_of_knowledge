@@ -14,8 +14,8 @@ sudo apt-get install -y build-essential
 php:
 ```shell
 sudo apt-get install php # base php 7
-# useful php dev items
-apt-get install php-pear php7.0-dev php7.0-zip php7.0-curl php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-xml libapache2-mod-php7.0 php-mbstring
+sudo apt-get install php-pear php7.0-dev php7.0-zip php7.0-curl php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-xml libapache2-mod-php7.0 php-mbstring # useful php dev items
+sudo apt-get install php php-pear php-dev php-zip php-curl php-gd php-mysql php-xml libapache2-mod-php php-mbstring # update for ubuntu 18.04
 ```
 composer
 ```shell

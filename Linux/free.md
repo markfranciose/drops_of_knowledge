@@ -1,4 +1,4 @@
 Check free system memory
 ```shell
-free -m 
+free -h # human readable
 ```

@@ -1,0 +1,5 @@
+##### JUST A LIST OF COMMANDS ######
+id
+whoami
+
+

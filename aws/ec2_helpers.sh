@@ -3,7 +3,14 @@ aws_create_key() {
 }
 
 aws_list_keys() {
-	aws ec2 describe-key-pairs
+	aws ec2 describe-key-pairs \
+        --query "KeyPairs[*].KeyName" \
+        --output table
+}
+
+aws_delete_key() 
+{
+        aws ec2 delete-key-pair --key-name $1
 }
 
 aws_create_security_group() {
