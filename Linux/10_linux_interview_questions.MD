@@ -11,8 +11,7 @@ For all info, version, and release respectively.
 
 ## 2. How do you determine the IP address?
 
-
-```
+```shell
 ifconfig
 ip address show
 ip address show eth0

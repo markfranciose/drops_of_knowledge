@@ -1,8 +1,9 @@
 #### Create image using the pwd's Dockerfile #### 
-docker build -t someimage 
+docker build -t someimage . 
+docker build -t dog-image .
 
 #### Run the 'someimage' mapping port 6666 to 80 #### 
-docker run -p 4000:80 someimage
+docker run -p 6666:80 someimage
 
 #### As above, but in 'detached' mode #### 
 docker run -d -p 4000:80 someimage

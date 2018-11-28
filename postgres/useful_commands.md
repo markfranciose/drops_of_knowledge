@@ -5,8 +5,13 @@
 \connect dogbase
 
 # list
-\ds # sequences
-\dt # tables
+\l # list databases
+\ds # list sequences
+\dt # list tables
+\du # list users
+\di # list indexes
+\dv # list views
+\dn # list schemas
 
 # column width, column wrapping
 \pset format wrapped
@@ -58,6 +63,11 @@ Import a sql dump into the current DB
 ```
 (from the command line)
 ```shell psql already_created_database < oodle_of_dogs.sql```
+
+export db - sql dump:
+```shell
+pg_dump db_name > file.out
+```
 
 
 Create a copy of a DB:

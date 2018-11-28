@@ -1,0 +1,44 @@
+S5L1
+- Think of a VPC as a logical datacenter in AWS
+- VPCs = IGWs, Virtual Private Gateways, Route Tables, NACLs, subnets,
+  security groups.
+- 1 Subnet = 1 AZ
+- Security Groups are Stateful, NACLs are stateless, eg NACLs have to set
+  ingress/egress
+- No Transitive Peering.
+
+S5L2
+- AWS reserves 5 IP addys on each block.
+- Can't have multiple IGWs on a VPC
+
+S5L3
+NAT Instances
+- When creating a NAT Instance, disable 'Source/Destination Check' on the
+  instance
+- NAT instances must be in a private subnet	
+- There must be a route out of the private subnet to the NAT instance.
+- The size of the instance determines amount of Netowrk traffic.
+- If bottlenecking scale instance up
+- You can create high availability w/ Autoscalling Groups, mutiple subets
+  across AZs, and scripts to automate failover.
+NAT Gateways
+- Scale automatically to 10Gbps
+- No patching
+- No security group maintainence
+- Automatically assigned public IP
+- Remember to update route tables
+- No need to disable Source/Destination Checks
+- Different NGs in different AZs to guard against failure
+- Failover will happen automatically
+
+S5L4
+Default NACL created with the default VPC allows everything 
+By default when creating a new NACL (your new VPC), everything is blocked.
+Each subnet must be associated with an NACL, if you don't associate one it
+will be associated with the default.
+A subnet can only be associated with one NACL
+A NACL can be associated with many subnets
+NACLs go before the Security Groups
+NACL rules are evaluated in order, lowest first
+NACL - inboud/outbound --> block/allow
+NACLs can block IPs, security groups can't

@@ -12,3 +12,11 @@ kill -9 1234
 
 _list all users_
 ```cat /etc/psswd```
+
+replace recursively
+```shell
+find ./dir -type f -print0 | xargs -0 sed -i 's/old/new/g'
+```
+
+Useful non-core programs:
+cloc - Count lines of code

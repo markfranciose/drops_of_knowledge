@@ -1,2 +1,15 @@
 _symlinks_
 $ ln -s /thing/to/which/im/linking /new/symlink
+
+_unzip
+```shell
+$ unzip zipped_file.zip
+```
+
+_open
+```shell
+xdg-open file.mp3
+```
+
+list of groups, members
+```/etc/groups```
