@@ -1,8 +1,16 @@
 _#API - Application Programming Interfaces
 Provide functionality
 
+_#ECMAScript - (European Computer Manufacturers Association) Script
+The standardized version of JavaScript.
+
+_#GPG - GNU Privacy Guard
+GNU encryption software
+
 _#ORM - Object Relational Mapping aka Object Relational Management. 
 How do we take relational data - databases that store data in columns, rows, tables - and use it in an object-oriented programming language. We want the data to be arrays, strings... etc.
+
+
 
 
 
