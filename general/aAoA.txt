@@ -7,6 +7,16 @@ Package management in Debian-derived Linux flavors
 _#DNS - Domain Name System
 System for taking a human friendly name and converting it to an IP.
 
+_#EXT[2,3,4] - Extended File System
+Primary Linux-used filesystem. Default on some popular Linux distros (2018).
+
+_#FAT - File Allocation Table
+File system architecture. No longer the current hotness anywhere (even windows), but useful for compatibility between different systems.
+_#FAT(8)
+_#FAT12
+_#FAT16
+_#FAT32
+
 _#HTTP - Hypertext Transfer Protocol
 
 _# MIME - Multipurpose Internet Mail Extensions 
@@ -19,6 +29,12 @@ How do we take relational data - databases that store data in columns, rows, tab
 
 _#REST - Representational State Transfer
 
+_#SATA - Serial Advanced Technology Attachment
+Modern (2018) standard of connecting storage devices to computers.
+
+_#SCSI - Small Computer System Interface
+Standards for physically connecting and transfering data between computers and peripheral devices.
+
 _#SOAP - Simple Object Access Protocol
 
 _#URI - Uniform Resource Identifier 
@@ -27,4 +43,10 @@ String of characters used to identify a resource.
 _#URL - Uniform Resource Location
 'web address', all URLs are URIs. (URNs, are URIs that are not URLs)
 in common usage, this is synonomous with URI.
+
+_#XFS - no acro
+modern (2018) file system, used in Linux distros, pushed by Red Hat.
+
+_#ZFS - no acro
+a combined file system and logical volume manager, comes from Solaris
 
