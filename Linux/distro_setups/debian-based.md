@@ -29,6 +29,11 @@ mysql:
 sudo apt-get install mysql-server
 ```
 
+postgresql:
+```
+sudo apt install postgresql postgresql-client
+```
+
 python:
 ```
 python3 -V # should be installed

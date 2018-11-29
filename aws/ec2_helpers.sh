@@ -17,8 +17,10 @@ aws_create_security_group() {
 	if [[ $# -eq 0 ]] ; then
 	echo 'description'
 	read description
-    	echo $description
-    exit 0
-fi
-
+    	echo 'name'
+	read name
+	aws ec2 create-security-group --description $description \
+		--group-name $name 
+	return 0
+	fi
 }

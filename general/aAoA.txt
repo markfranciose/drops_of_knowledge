@@ -4,8 +4,14 @@ Provide functionality
 _#APT - Advanced Package Tool
 Package management in Debian-derived Linux flavors
 
+_#CIDR - Classless Inter-Domain Routing
+Method of allocating IP addys and IP routing.
+
 _#DNS - Domain Name System
 System for taking a human friendly name and converting it to an IP.
+
+_#ECMAScript - (European Computer Manufacturers Association) Script
+The standardized version of JavaScript.
 
 _#EXT[2,3,4] - Extended File System
 Primary Linux-used filesystem. Default on some popular Linux distros (2018).
@@ -17,12 +23,18 @@ _#FAT12
 _#FAT16
 _#FAT32
 
+_#GPG - GNU Privacy Guard
+GNU encryption software
+
 _#HTTP - Hypertext Transfer Protocol
 
-_# MIME - Multipurpose Internet Mail Extensions 
+_#MIME - Multipurpose Internet Mail Extensions 
 Standardized way to indicate the nature and format of a document.
 Browsers will often use the MIME type to decide how to process a
 document
+
+_#NAT - Network Address Translation
+Remapping one IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device.
 
 _#ORM - Object Relational Mapping aka Object Relational Management.
 How do we take relational data - databases that store data in columns, rows, tables - and use it in an object-oriented programming language. We want the data to be arrays, strings... etc.
