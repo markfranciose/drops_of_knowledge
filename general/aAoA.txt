@@ -28,6 +28,9 @@ GNU encryption software
 
 _#HTTP - Hypertext Transfer Protocol
 
+_#IANA - Internet Assigned Numbers Authority
+Database of all top-level domains
+
 _#MIME - Multipurpose Internet Mail Extensions 
 Standardized way to indicate the nature and format of a document.
 Browsers will often use the MIME type to decide how to process a

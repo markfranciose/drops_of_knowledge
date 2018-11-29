@@ -2,6 +2,8 @@ associative array: key value pairs data type, each key can appear only once. aka
 
 checksum: A hash function, used to verify data integrity, eg. that it hasn't been corrupted or altered. You compare your data against a published checksum.
 
+filesystem: How data is stored and retrieved in a system. Large variability at the highest level. In practice, mostly refers to storage devices.
+
 firmware: A class of software that provides low-level functionality for a specific piece of hardware.
 
 hash function: Any function that can be used to map data of an aribtrary size to a fixed size.
