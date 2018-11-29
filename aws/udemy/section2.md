@@ -2,8 +2,8 @@ Section 2
 
 Lecture 4
 - A region is a geographical area, each region consists of 2 or more availability zones
+- useast2, useast1...etc
 - An availabilty zone is just a datacenter - redundant power, networking and connectivity, housed in separted facilioties
-- useast2, useast...etc
 
 architect to put your resources across multiple azs, in case there is a failure in one.
 
@@ -40,7 +40,7 @@ Server migration service - migrate virtual & real server to AWS
 Snowball again
 
 Network and Content Delivery
-VPC - Virtual Private Cloud - virtual datacenter *Important to understand VPS*
+VPC - Virtual Private Cloud - virtual datacenter *Important to understand VPC*
 CloudFront - Amazon's CDN
 Route 53 - DNS
 API gateway - Dev & Sol architect - create own apis for other services to report to
@@ -76,7 +76,7 @@ MediaStore
 MediaTailor
 
 Machine Learning
--Sage Maker - use deep learning
--comprehend - sentiment analysis
-deeplens - artificial aware camera
+- Sage Maker - use deep learning
+- comprehend - sentiment analysis
+- deeplens - artificial aware camera
 

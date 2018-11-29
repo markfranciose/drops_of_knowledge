@@ -5,6 +5,7 @@
 
 ## 37 - Create an AMI
 
+
 ## 38 - EBS Root Volumes vs. Instance Store
 AMIs - choose by OS, region, architeture, storage (ebs vs. instance)
 
@@ -26,6 +27,8 @@ Load balancing, make sure no one server in a pool is overworked.
 504 - gateway timeout, no response eithin timeout period. trouble shoot the app.
 
 ## 48 - Placement Groups
+
+If you see just 'placement group', they're talking about clustered
 
 Clustered - low-latency, high throughput, close together instances. single AZ
 Spead - critical application points that you want to keep geographically separate, multiple AZ 

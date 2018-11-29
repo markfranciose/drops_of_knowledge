@@ -42,3 +42,53 @@ NACLs go before the Security Groups
 NACL rules are evaluated in order, lowest first
 NACL - inboud/outbound --> block/allow
 NACLs can block IPs, security groups can't
+
+S12L108
+Kinesis - consume big data 
+        - stream large ammounts of data (feeds, logs) into cloud
+Large amounts of data:
+        - Redshift for business intelligence
+        - EMR for big data processing.
+Instance store v EBS
+        - instance store is ephemeral, can't be stopped, won't survive host going down.
+OpsWorks
+        - Orchestration Service that uses Chef
+        - Chef = recipies to maintain consistent state of infra
+        - 'Chef', 'recipies', 'cook book' = OpsWorks
+Elastic Transcoder
+        - media transcoder in the cloud
+        - settings for popular output formats
+        - pay based on minutes used and resolution
+SWF Actors:
+        - starters: can initiate a workflow
+        - deciders: control the flow of activity within a workflow 
+        - workers:  carry out tasks
+Instance meta-data:
+        - curl http://169.254.169.254/latest/metadata on the instance
+
+S12L109 Organizations and Consolidated Billing
+        - Organizations:
+                - Root -> Org Unit -> AWS Accounts.
+                - policies can be applied to the Root, Org Units or to individual accounts
+        - Consolidated Billing:
+                - Paying Account -> dev (dev spend $)
+                                 -> production (prod spend $)
+                                 -> back office (back-office spend $)
+                - Paying account is independent, can't access resources of other accounts
+                - limit of 20 linked accounts for consolidated billing
+                + one bill
+                + easy to track charges and allocate costs
+                + volume pricing discount
+                        + rollup of data transfer...etc.
+                        + unused reserved instances, used by another account
+                        (eg, as long as they are the same type, on-demand instances in another account will be applied to that reserved instance reservation)
+                - enable MFA on root account, use strong passwd, only using paying account for billing, no resources
+                - CloudTrail is on a per account basis, but can be aggregated into a single bucket in the paying account
+
+S12L110 AWS organizations
+        - Main uses:
+                - Centrally Manage Policies Across Multiple AWS Accounts
+                - Control Access to AWS services
+                - Automate AWS Account Creation and Management
+                - Consolidate billing Across multiple AWS accounts
+        

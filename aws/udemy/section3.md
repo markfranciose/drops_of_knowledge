@@ -32,8 +32,6 @@ follow directions to configure.
 Can be a virtual device (eg. alert on phone, Google Auth... )
 or a physical fob that you'd have to buy.
 
-
-
 ## Lecture 11. Create a billing Alarm - Lab
 - Enable Billing alert emails: Billing & Cost Management Dashboard -> Preferences -> [check] Receive Billing Alerts
 - go to CloudWatch -> Alarms -> Create Alarm:
@@ -52,7 +50,4 @@ or a physical fob that you'd have to buy.
 - New Users are assigned an Access Key ID & Secret Access key when created. Not a password, can use the CLI and the APIs. Only viewed once, can destroy and re-create.
 - Always set up MFA on your root account.
 - You can create and customize your own personal password rotation policies.
-
-
-
 

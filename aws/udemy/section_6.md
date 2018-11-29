@@ -17,7 +17,7 @@ Alias records -
 MX records - 
 PTR records 
 
-ELBs don't have IPv4 addys, resolve them using a DMS name. Alias Records can be used for nake domains, CNAMes cannot. 
+ELBs don't have IPv4 addys, resolve them using a DNS name. Alias Records can be used for naked domains, CNAMes cannot. 
 
 ## 58 - Domain Registration Lab
 Route 53 is global

@@ -6,6 +6,7 @@ logically isolated section of AWS>
 subnets, multiple security controls.
 can use a VPN to connect to existing datacenter
 
+(below is a transcription of a network diagram ;p)
 Region -> VPC (CIDR address range) -> Subnets -public & private
 connect via VPN/internet gateway. -> Router -> Route Table -> NetworkACL -> individual subnets.
 one subnet = one availabilty zones.
@@ -22,17 +23,17 @@ Much better security control - subnets, network ACLs, instance security groups.
 Subnet network access control lists
 
 Default VPC v. Custom VPC
-- default VPC is user friendly, allows you to immediately deploy instances.
+- default VPC is user friendly, allows you to immediately deploy instances
 - All subnets in default VPC have a route out to the internet
-- each ec2 instance has a public and private IP address.
+- each ec2 instance has a public and private IP address
 
 VPC Peering
 Allow you to connect one VPC to one another via a direct network route using private IP addresses.
-can peer VPCs with other AWS accounts. Peering is always hub and spoke, no tran
+can peer VPCs with other AWS accounts. Peering is always hub and spoke, no transitive peering
 
 Exam Tips
 - Think of a VPC as a logical datacenter in AWS.
-- Consists of IGWs, or VPGs, Route Tables, NACLs, Subnets, Security Groups.
+- Consists of IGWs, or VPGs, Route Tables, NACLs, Subnets, Security Groups
 - 1 subnet = 1 AZ
 - Security Groups are stateful , NACLs are stateless
 - No transitive peering
