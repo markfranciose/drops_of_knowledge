@@ -28,6 +28,15 @@ GNU encryption software
 
 _#HTTP - Hypertext Transfer Protocol
 
+_#JDK - Java Development Kit
+SDK to create and compile Java programs
+
+_#JRE - Java Runtime Environment
+Package of the things needed to run a Java program (eg, JVM, core libs... etc)
+
+_#JVM - Java Virtual Machine
+VM that allow a computer to run programs compiled to Java bytecode.
+
 _#MIME - Multipurpose Internet Mail Extensions 
 Standardized way to indicate the nature and format of a document.
 Browsers will often use the MIME type to decide how to process a
@@ -46,6 +55,9 @@ Modern (2018) standard of connecting storage devices to computers.
 
 _#SCSI - Small Computer System Interface
 Standards for physically connecting and transfering data between computers and peripheral devices.
+
+_#SDK - Software Development Kit
+A set of tools to create software in a given language, framework... etc.
 
 _#SOAP - Simple Object Access Protocol
 
