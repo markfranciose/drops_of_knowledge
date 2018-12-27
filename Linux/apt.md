@@ -20,3 +20,12 @@ with ```apt-transport-https```, can use the https version of urls.
 
 ```/etc/apt/sources.list``` can also include non-official Debian repos.
 
+### Upgrading
+```shell
+$ sudo apt-get upgrade
+```
+vs.
+```shell
+$ sudo apt-get dist-upgrade
+```
+dist-upgrade will do some 'smart-upgrading', eg. managing uninstallation / updating of dependencies for different packages.
