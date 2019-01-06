@@ -46,7 +46,7 @@ git config --global user.email "wendy.richter@wwe.com"
 git config --global user.name  "Wendy Richter"
 ```
 
-revert to previous commit (see what this actually does - TODO - give a susinct explanation of what this is)
+revert a previous commit (see what this actually does - TODO - give a susinct explanation of what this is)
 ```shell
 git revert HEAD
 ```
@@ -84,3 +84,15 @@ git rebase -i HEAD~4
 ```
 
 
+### UH-OHs 
+
+I want [to work off] a file from a previous commit of this branch 
+
+```shell
+$ git checkout <commit_hash> -- <file_path>
+```
+
+I want to [work off] a previous commit entirely
+```shell
+$ git checkout <commit_hash>
+```
