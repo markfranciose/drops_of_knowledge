@@ -20,10 +20,15 @@ app.get('/show_error', function showError(req, res) {
 });
 
 
+// bind hostname:
+app.listen(port, '0.0.0.0');
+
 // serving static files:
 // https://expressjs.com/en/starter/static-files.html
 
 // best to use the absolute path
 app.use('/static', express.static(path.join(__dirname, 'public')))
+
+
 
 
