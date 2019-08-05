@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int printList( struct* head);
+int printList2( struct* n);
+
 struct Node
 {
 	int data;
