@@ -4,9 +4,9 @@
 
 // A structure to represent the Queue
 struct Queue {
-	int front, rear, size;
+	int			 front, rear, size;
 	unsigned capacity;
-	int* array;
+	int*		 array;
 };
 
 // function to create a queue of given capacity
