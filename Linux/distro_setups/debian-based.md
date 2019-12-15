@@ -80,7 +80,6 @@ sudo apt-get install default-jre
 # JDK
 sudo apt-get install default-jdk
 
-
 gradle:
 gradle releases: https://gradle.org/releases/
 ```shell
@@ -100,3 +99,11 @@ export PATH=${GRADLE_HOME}/bin:${PATH}
 sudo chmod +x /etc/profile.d/gradle.sh
 source /etc/profile.d/gradle.sh
 ```
+
+kubectl:
+```shell
+cd /tmp
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+``
