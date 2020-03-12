@@ -34,6 +34,12 @@ standard for layout of partition table, using GUIDs.
 
 _#HTTP - Hypertext Transfer Protocol
 
+_#ICMP - Internet Control Message Protocol
+support protocol in IPS used by networking devices to send errors/control messages, used w/ ping
+
+_#IMAP - Internet Message Access Protocol
+standard for retrieval of emails.
+
 _#JDK - Java Development Kit
 SDK to create and compile Java programs
 
@@ -69,7 +75,16 @@ Standards for physically connecting and transfering data between computers and p
 _#SDK - Software Development Kit
 A set of tools to create software in a given language, framework... etc.
 
+_#SMTP - Simple Mail Transfer Protocol
+Default standard for sending emails
+
 _#SOAP - Simple Object Access Protocol
+
+_#TCP - Transmission Control Protocol
+Major component of IP - reliable, ordered, error checked packets between hosts
+
+_#UDP - User Datagram Protocol
+IP component - no guarantee of delivery, ordering, or duplicate protection. Faster than TPC b/c of this.
 
 _#UEFI - Unified Extensible Firmware Interface
 Spec between OSes and Firmware 

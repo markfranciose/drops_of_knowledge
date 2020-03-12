@@ -80,6 +80,26 @@ sudo apt-get install default-jre
 # JDK
 sudo apt-get install default-jdk
 
+gradle:
+gradle releases: https://gradle.org/releases/
+```shell
+wget https://services.gradle.org/distributions/gradle-5.0-bin.zip -P /tmp
+sudo unzip -d /opt/gradle /tmp/gradle-*.zip
+
+sudo vim /etc/profile.d/gradle.sh
+```
+
+in ```gradle.sh```:
+```
+export GRADLE_HOME=/opt/gradle/gradle-5.0
+export PATH=${GRADLE_HOME}/bin:${PATH}
+```
+
+```shell
+sudo chmod +x /etc/profile.d/gradle.sh
+source /etc/profile.d/gradle.sh
+```
+
 kubectl:
 ```shell
 cd /tmp
@@ -87,7 +107,6 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s http
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 ``
-
 nginx:
 ```shell
 sudo apt-get install nginx # simple... for a stable version
