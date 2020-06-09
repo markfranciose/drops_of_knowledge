@@ -24,4 +24,9 @@ SET dog_name = 'Rusty Roo', collar = 'red'
 WHERE dog_id = 2;
 ```
 
+### add default to existing column
+#### checked with: psql, mysql
+```sql
+ALTER TABLE dogs ALTER COLUMN is_top_dawg SET DEFAULT 'no way';
+```
 

@@ -23,3 +23,7 @@ REPLICATION
 ```sql
 SELECT current_user
 ```
+
+## psql quickness
+### reset user passwd:
+```\password <user>```
