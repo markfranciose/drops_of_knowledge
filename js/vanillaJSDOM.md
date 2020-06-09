@@ -98,3 +98,8 @@ You have to use the ```getAttribute(..)``` function.
 
 
 
+__ redirect __
+window.location.replace('http://google.com');
+
+
+

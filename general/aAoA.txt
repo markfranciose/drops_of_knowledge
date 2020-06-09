@@ -4,6 +4,9 @@ Provide functionality
 _#APT - Advanced Package Tool
 Package management in Debian-derived Linux flavors
 
+_#BIOS - Basic Input-Output System
+Firmware, runtime services for OSes. Installed on board, run first on power on.
+
 _#CIDR - Classless Inter-Domain Routing
 Method of allocating IP addys and IP routing.
 
@@ -26,10 +29,31 @@ _#FAT32
 _#GPG - GNU Privacy Guard
 GNU encryption software
 
+_#GPT - GUID (global unique id) Partition Table
+standard for layout of partition table, using GUIDs. 
+
 _#HTTP - Hypertext Transfer Protocol
 
 _#IANA - Internet Assigned Numbers Authority
 Database of all top-level domains
+_#ICMP - Internet Control Message Protocol
+support protocol in IPS used by networking devices to send errors/control messages, used w/ ping
+
+_#IMAP - Internet Message Access Protocol
+standard for retrieval of emails.
+
+_#JDK - Java Development Kit
+SDK to create and compile Java programs
+
+_#JRE - Java Runtime Environment
+Package of the things needed to run a Java program (eg, JVM, core libs... etc)
+
+_#JVM - Java Virtual Machine
+VM that allow a computer to run programs compiled to Java bytecode.
+
+_#MBR - Master Boot Record
+Boot sector at the beginning of a drive, how partitions, filesystems etc are 
+organized on drive. 1983, older tech.
 
 _#MIME - Multipurpose Internet Mail Extensions 
 Standardized way to indicate the nature and format of a document.
@@ -50,7 +74,22 @@ Modern (2018) standard of connecting storage devices to computers.
 _#SCSI - Small Computer System Interface
 Standards for physically connecting and transfering data between computers and peripheral devices.
 
+_#SDK - Software Development Kit
+A set of tools to create software in a given language, framework... etc.
+
+_#SMTP - Simple Mail Transfer Protocol
+Default standard for sending emails
+
 _#SOAP - Simple Object Access Protocol
+
+_#TCP - Transmission Control Protocol
+Major component of IP - reliable, ordered, error checked packets between hosts
+
+_#UDP - User Datagram Protocol
+IP component - no guarantee of delivery, ordering, or duplicate protection. Faster than TPC b/c of this.
+
+_#UEFI - Unified Extensible Firmware Interface
+Spec between OSes and Firmware 
 
 _#URI - Uniform Resource Identifier 
 String of characters used to identify a resource.

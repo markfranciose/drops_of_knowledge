@@ -6,5 +6,11 @@ save a new file:
 
 copy to clipboard(windows):
 ```
-*select* "*y
+: "*y
+```
+
+move cursor location && line to top of the screen
+```
+cmd z + enter
+cmd z + t     (maintains cursor position)
 ```

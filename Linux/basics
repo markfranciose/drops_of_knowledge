@@ -13,3 +13,12 @@ xdg-open file.mp3
 
 list of groups, members
 ```/etc/groups```
+
+format usb:
+make sure its unmounted
+```umount /dev/<usb>```
+use mkfs:
+```sudo mkfs.vfat /dev/<usb>```
+
+list dirs
+ls -d */

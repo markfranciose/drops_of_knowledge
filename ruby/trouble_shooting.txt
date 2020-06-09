@@ -1,0 +1,4 @@
+tags: _#bundler _#rbenv
+error: 'find_spec_for_exe': can't find gem bundler (>= 0.a) with executable bundle (Gem::GemNotFoundException)
+fix: run - gem update --system
+
