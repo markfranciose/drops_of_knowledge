@@ -1,5 +1,7 @@
 ##### JUST A LIST OF COMMANDS ######
+fdisk
 id
 whoami
+sysctl
 
 
