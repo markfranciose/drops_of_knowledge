@@ -1,0 +1,1 @@
+get unique lines: cat ~/file.txt | sort | uniq
