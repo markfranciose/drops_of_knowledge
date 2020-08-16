@@ -83,6 +83,10 @@ git branch -D old_branch
 git rebase -i HEAD~4
 ```
 
+### I want to do something else, don't want to commit everything.
+```shell
+$ git stash save This is a message that will be with my stash
+```
 
 ### UH-OHs 
 
