@@ -1,0 +1,113 @@
+Preface:
+- overview of the sections and suggestions for teaching a course with the book.
+- considered a Junior/Senior/1st year grad level course
+
+Chapter 1: Introduction to Compilers
+- defn: translator: a program that takes as input a program written in one
+        language and produces as output a program in another language.
+- defn: compiler: a translator who's source/input language is a high-level
+        language and who's output/object language is low-level (machine or
+        assembly)
+- defn: assembler: a translator who's input language is assembly and who's
+        output language is machine.
+- high-level languages allow us to write: A + B, rather than a sequence of 
+  assembly instructions
+
+Compiliation as a series of steps:
+          source program
+|         || 
+|         [lexical analysis]
+|         ||
+|         [syntax analysis]
+|         ||
+table     [intermediate code generation]  error
+mgmt      ||                              handling
+|         [code optimization]
+|         ||
+|         [code generation]
+|         ||
+          target program
+
+table mgmt and error handle occur throughout
+
+- defn: lexical analysis: separating the characters of the source language
+        into tokens that logically belong together.
+- defn: syntax analysis: grouping tokens, often as a tree of tokens
+- defn: intermediate code generation: Using the structures provided by the
+        syntax analysis, create a stream of simple instructions
+- defn: code optimization: improve intermediate code
+- defn: code generation: produce object code by  deciding memory locations, 
+        selecting registers
+- defn: table management: portion of the compiler that keeps track of the 
+        names used in the program. Data stucture called a 'symbol table'
+- defn: error handler: invoked when a flaw in the source program is detected
+
+- portions of the steps above are combined into a 'pass'
+- defn: pass: reads the source program, or the output of a previous pass, 
+        makes transformations, writes output to an intermediate file, which
+        may be read by a subsequent pass
+
+Lexical Analysis
+- interface between the source program and the compiler
+- read source program char by char and create 'tokens'
+FORTRAN statement:
+
+IF (5 .EQ. MAX) GO TO 100
+
+produces 8 tokens:
+- IF
+- (
+- 5
+- .EQ.
+- MAX
+- )
+- GO TO 
+- 100
+
+might produce a token stream like:
+if ( [const, 341] eq [id, 729] ) goto [label, 554] 
+
+Syntax Analysis
+- Are the tokens in a pattern permitted by the source language
+- Imposes a tree-like structure on the tokens for subsequent passes to use
+
+Intermediate Code Generation
+- transforms the parse tree into an intermediate-language representation of 
+the source program
+
+*examples of parse trees*
+
+while-statement:
+while A>B & A<=2*B-5 do
+A := A + B;
+
+into token stream:
+while [id, n1] > [id, n2] & [id, n1] <= [const, n3] * [id, n2] - [const, n4] do
+  [id, n1] <- [id,n1] + [id, n2];
+
+intermediate code:
+L1: if A > B goto L2
+    goto L3
+L2: T1 := 2 * B
+    T2 := T1 - 5
+    if A <= T2 goto L4
+L4  A := A + B
+    goto L1
+L3 
+
+Optimization: covered more concretely in later chapters
+
+Code generation: converts the intermediate code into a series of machine
+instructions.
+statement: A := B + C
+into:
+LOAD B
+ADD C
+STORE A
+
+Brief explanations of error handling and table mgmt
+Compiler compilers and tooling examples
+
+Chapter 2: Programming languages
+A higher-level overview of the facets of high-level programming languages
+

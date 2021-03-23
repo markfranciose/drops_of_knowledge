@@ -1,0 +1,13 @@
+Preface: 
+- overview of the sections, suggestions for teaching
+
+Chapter 1: Introduction to Compiling
+- defn: compiler: a program that reads a program written in one (source)
+        language and translates it into an equivalent program in another
+        (target) language
+- Compiliation modeled as analysis && synthesis
+  analysis: break the source program into constituent pieces and and create
+  an intermediate representation of the program, often produces a tree
+  synthesis: construct the desired target program from the intermediate
+  synthesis requires the more complex techniques
+
