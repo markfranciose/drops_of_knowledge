@@ -45,4 +45,5 @@ docker tag <image> username/repo:tag
 docker push username/repo:tag
 
 #### Run image from a registry #### 
-docker run username/repo:tag
+docker run -p 2001:2001 username/repo:tag
+

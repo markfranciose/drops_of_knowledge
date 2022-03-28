@@ -1,0 +1,16 @@
+Main Screen command
+l - bring up the limit command (filter)
+  ~b - search message body
+  ~B - whole message
+  ~f - from
+
+example: `~f mark@cooldude.com ~b radical`
+
+  ~d - date-based
+
+example: `~d -01/01/2019` for all messages before Jan 1 2019
+         `~d 01/01/2019-` for all messages before Jan 1 2019
+         `~d 01/01/2019` for all messages on Jan 1 2019 
+         `~d <1m` for messages less than 1 month old
+
+

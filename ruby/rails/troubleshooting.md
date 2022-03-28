@@ -28,3 +28,8 @@ gem 'bcrypt', platforms: :ruby
 
 Error message ```ActionController::RoutingError (No route matches [OPTIONS]```
 problem: rails doesn't process OPTIONS requests. install rack-cors gem
+
+
+Problem: 'webpacker and/or asset pipeline fails to compile'
+solution:   `webpack_compile_output: true` in config/webpacker.yml
+
